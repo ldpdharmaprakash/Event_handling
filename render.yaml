@@ -4,5 +4,5 @@ services:
     env: static
     branch: main
     repo: https://github.com/ldpdharmaprakash/Event_handling
-    rootDir: /
-    staticPublishPath: /
+    rootDir: .
+    staticPublishPath: .
