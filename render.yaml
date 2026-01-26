@@ -1,0 +1,8 @@
+services:
+  - type: static
+    name: BCAS_CT_FACE_PREP
+    repo: https://github.com/ldpdharmaprakash/Event_handling
+    branch: main
+    rootDir: /
+    buildCommand: ""
+    publishPath: /
