@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Communication Activities</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<header class="header comm-bg">
+  <h1>Communication Activities</h1>
+  <p>Speak • Persuade • Express</p>
+  <p style="margin-top: 10px; opacity: 0.8;">Event Coordinator: Ms. P. Priya Dharshini</p>
+</header>
+
+<section class="event-grid">
+
+  <!-- JAM -->
+  <div class="event-card">
+    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="JAM Session">
+    <h3>JAM (Just a Minute)</h3>
+    <p class="short">Speak on a surprise topic for 1 minute.</p>
+
+    <p class="full hidden">
+      🕒 10:00 AM – 11:00 AM <br>
+      📍 Seminar Hall <br>
+      📋 Coordinator: P. Priya Dharshini <br>
+      🎯 General non-academic topics
+    </p>
+
+    <button onclick="toggleDetails(this)">Show More</button>
+    <a href="https://forms.gle/COMM_JAM_FORM" target="_blank" class="register">Register</a>
+  </div>
+
+  <!-- Convince Me -->
+  <div class="event-card">
+    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Convince Me">
+    <h3>Convince Me If You Can</h3>
+    <p class="short">Sell a fun idea to the audience!</p>
+
+    <p class="full hidden">
+      🕒 11:00 AM – 12:00 PM <br>
+      📍 Room 102 <br>
+      🎭 Fun products or ideas <br>
+      🗣️ Persuasion skills test
+    </p>
+
+    <button onclick="toggleDetails(this)">Show More</button>
+    <a href="https://forms.gle/COMM_CONVINCE_FORM" target="_blank" class="register">Register</a>
+  </div>
+
+  <!-- Picture Talk -->
+  <div class="event-card">
+    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Picture Talk">
+    <h3>Picture Talk - Think and Speak</h3>
+    <p class="short">Describe and interpret random pictures.</p>
+
+    <p class="full hidden">
+      🕒 12:00 PM – 12:30 PM <br>
+      📍 Seminar Hall <br>
+      🖼️ Random pictures shown <br>
+      ⏱️ 30 seconds think, 1 minute speak
+    </p>
+
+    <button onclick="toggleDetails(this)">Show More</button>
+    <a href="https://forms.gle/COMM_PICTURE_FORM" target="_blank" class="register">Register</a>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
