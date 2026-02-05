@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: BCAS_FACE_PREP
-    env: static
-    branch: main
-    repo: https://github.com/ldpdharmaprakash/Event_handling
-    rootDir: .
-    staticPublishPath: .

@@ -166,3 +166,193 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+function showTab(tabName) {
+  // Hide all tab panes
+  const panes = document.querySelectorAll('.tab-pane');
+  panes.forEach(pane => {
+    pane.classList.remove('active');
+  });
+
+  // Show the selected tab pane
+  const selectedPane = document.getElementById(tabName);
+  if (selectedPane) {
+    selectedPane.classList.add('active');
+  }
+
+  // Update button active state
+  const buttons = document.querySelectorAll('.tab-btn');
+  buttons.forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.getAttribute('data-tab') === tabName) {
+      btn.classList.add('active');
+    }
+  });
+}
+
+function toggleEventDetails(button) {
+  const cardBody = button.closest('.event-card').querySelector('.card-body');
+  const details = cardBody.querySelector('.event-details');
+  
+  if (details.classList.contains('hidden')) {
+    details.classList.remove('hidden');
+    button.textContent = "Hide Details";
+    button.style.background = "#f0f0f0";
+  } else {
+    details.classList.add('hidden');
+    button.textContent = "View Details";
+    button.style.background = "transparent";
+  }
+}
+
+/* --- MODAL LOGIC START --- */
+
+// Function to open the modal with the specific URL
+function openRegisterModal(url) {
+  if (!url) {
+    alert("Registration link for this event will be available soon!");
+    return;
+  }
+  
+  const modal = document.getElementById('registrationModal');
+  const iframe = document.getElementById('registrationFrame');
+  const newTabBtn = document.getElementById('newTabLink'); // Get the button
+  
+  // Set the source for the iframe
+  iframe.src = url;
+  
+  // Set the source for the "Open in New Tab" button
+  // (We remove '?embedded=true' for the direct link so it looks cleaner)
+  const cleanUrl = url.replace('?embedded=true', '');
+  newTabBtn.href = cleanUrl;
+
+  modal.style.display = "block";
+  document.body.style.overflow = "hidden"; 
+}
+
+// Function to close the modal
+function closeRegisterModal() {
+  const modal = document.getElementById('registrationModal');
+  const iframe = document.getElementById('registrationFrame');
+  
+  modal.style.display = "none";
+  iframe.src = ""; 
+  document.body.style.overflow = "auto"; 
+}
+
+// Close modal when clicking outside the box
+window.onclick = function(event) {
+  const modal = document.getElementById('registrationModal');
+  if (event.target == modal) {
+    closeRegisterModal();
+  }
+}
+/* --- MODAL LOGIC END --- */
+
+function showTab(tabName) {
+  // Hide all tab panes
+  const panes = document.querySelectorAll('.tab-pane');
+  panes.forEach(pane => {
+    pane.classList.remove('active');
+  });
+
+  // Show the selected tab pane
+  const selectedPane = document.getElementById(tabName);
+  if (selectedPane) {
+    selectedPane.classList.add('active');
+  }
+
+  // Update button active state
+  const buttons = document.querySelectorAll('.tab-btn');
+  buttons.forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.getAttribute('data-tab') === tabName) {
+      btn.classList.add('active');
+    }
+  });
+}
+
+function toggleEventDetails(button) {
+  const cardBody = button.closest('.event-card').querySelector('.card-body');
+  const details = cardBody.querySelector('.event-details');
+  
+  if (details.classList.contains('hidden')) {
+    details.classList.remove('hidden');
+    button.textContent = "Hide Details";
+    button.style.background = "#f0f0f0";
+  } else {
+    details.classList.add('hidden');
+    button.textContent = "View Details";
+    button.style.background = "transparent";
+  }
+}
+
+/* --- MODAL LOGIC START --- */
+
+// Function to open the modal with the specific URL
+function openRegisterModal(url) {
+  if (!url) {
+    alert("Registration link for this event will be available soon!");
+    return;
+  }
+  
+  const modal = document.getElementById('registrationModal');
+  const iframe = document.getElementById('registrationFrame');
+  const newTabBtn = document.getElementById('newTabLink');
+  
+  // Set the source for the iframe
+  iframe.src = url;
+  
+  // Set the source for the "Open in New Tab" button
+  const cleanUrl = url.replace('?embedded=true', '');
+  newTabBtn.href = cleanUrl;
+
+  modal.style.display = "block";
+  document.body.style.overflow = "hidden"; 
+}
+
+// Function to close the modal
+function closeRegisterModal() {
+  const modal = document.getElementById('registrationModal');
+  const iframe = document.getElementById('registrationFrame');
+  
+  modal.style.display = "none";
+  iframe.src = ""; 
+  document.body.style.overflow = "auto"; 
+}
+
+// Close modal when clicking outside the box
+window.onclick = function(event) {
+  const modal = document.getElementById('registrationModal');
+  if (event.target == modal) {
+    closeRegisterModal();
+  }
+}
+/* --- MODAL LOGIC END --- */
+
+/* --- COUNTDOWN TIMER LOGIC --- */
+// Target Date: Feb 11, 2026
+const targetDate = new Date("Feb 11, 2026 00:00:00").getTime();
+
+const timer = setInterval(function() {
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  // Calculations
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Update DOM elements with 0-padding
+  document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+  document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+  document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+  document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+
+  // If the countdown is finished
+  if (distance < 0) {
+    clearInterval(timer);
+    document.getElementById("countdown").innerHTML = "<div style='color:white; font-size:1.5rem; font-weight:bold;'>Event Started!</div>";
+  }
+}, 1000);
