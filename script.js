@@ -1,30 +1,34 @@
+// Tab functionality
 function showTab(tabName) {
-
+  // Hide all tab panes
   const panes = document.querySelectorAll('.tab-pane');
   panes.forEach(pane => {
     pane.classList.remove('active');
   });
 
+  // Show the selected tab pane
   const selectedPane = document.getElementById(tabName);
   if (selectedPane) {
     selectedPane.classList.add('active');
   }
 
+  // Update button active state
   const buttons = document.querySelectorAll('.tab-btn');
   buttons.forEach(btn => {
     btn.classList.remove('active');
     if (btn.getAttribute('data-tab') === tabName) {
       btn.classList.add('active');
-
+      // Scroll the active button into view on mobile
       btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
   });
-
+  
+  // Re-trigger animations
   if (selectedPane) {
       const activeCards = selectedPane.querySelectorAll('.event-card');
       activeCards.forEach((card, index) => {
         card.style.animation = 'none';
-        card.offsetHeight; 
+        card.offsetHeight; /* trigger reflow */
         card.style.animation = `slideUp 0.5s ease ${index * 0.1}s both`;
       });
   }
@@ -33,7 +37,7 @@ function showTab(tabName) {
 function toggleEventDetails(button) {
   const cardBody = button.closest('.event-card').querySelector('.card-body');
   const details = cardBody.querySelector('.event-details');
-
+  
   if (details.classList.contains('hidden')) {
     details.classList.remove('hidden');
     button.textContent = "Hide Details";
@@ -45,18 +49,19 @@ function toggleEventDetails(button) {
   }
 }
 
+/* --- MODAL LOGIC START --- */
 function openRegisterModal(url) {
   if (!url) {
     alert("Registration link for this event will be available soon!");
     return;
   }
-
+  
   const modal = document.getElementById('registrationModal');
   const iframe = document.getElementById('registrationFrame');
   const newTabBtn = document.getElementById('newTabLink');
-
+  
   iframe.src = url;
-
+  
   const cleanUrl = url.replace('?embedded=true', '');
   newTabBtn.href = cleanUrl;
 
@@ -67,7 +72,7 @@ function openRegisterModal(url) {
 function closeRegisterModal() {
   const modal = document.getElementById('registrationModal');
   const iframe = document.getElementById('registrationFrame');
-
+  
   modal.style.display = "none";
   iframe.src = ""; 
   document.body.style.overflow = "auto"; 
@@ -79,9 +84,11 @@ window.onclick = function(event) {
     closeRegisterModal();
   }
 }
+/* --- MODAL LOGIC END --- */
 
+/* --- UI ENHANCEMENTS --- */
 document.addEventListener('DOMContentLoaded', function() {
-
+  // Mobile Parallax Fix: Only run on larger screens
   const hero = document.querySelector('.hero');
   if (hero && window.innerWidth > 900) {
     window.addEventListener('scroll', function() {
@@ -93,7 +100,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-
+  
+  // Smooth scroll for CTA
   const ctaButton = document.querySelector('.cta');
   if (ctaButton) {
     ctaButton.addEventListener('click', function(e) {
@@ -103,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const stickyNav = document.querySelector('.sticky-nav');
         const navHeight = stickyNav ? stickyNav.offsetHeight : 0;
         const targetPosition = targetSection.offsetTop - navHeight;
-
+        
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
@@ -112,6 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Animation Style injection
   const style = document.createElement('style');
   style.textContent = `
     @keyframes slideUp {
@@ -122,6 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.head.appendChild(style);
 });
 
+/* --- COUNTDOWN TIMER --- */
 const targetDate = new Date("Feb 11, 2026 00:00:00").getTime();
 
 const timer = setInterval(function() {
