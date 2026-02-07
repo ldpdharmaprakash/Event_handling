@@ -531,7 +531,7 @@ h1, h2, h3, h4 {
   bottom: -8px;
   width: 40px;
   height: 2px;
-  background-color: var(--primary-color);
+  background-color: #f15136; /* UPDATED from primary blue */
 }
 
 .footer-col p {
@@ -554,7 +554,7 @@ h1, h2, h3, h4 {
 }
 
 .footer-col ul li a:hover {
-  color: var(--primary-color);
+  color: #f15136; /* UPDATED from primary blue */
   padding-left: 5px;
 }
 
@@ -578,7 +578,7 @@ h1, h2, h3, h4 {
 }
 
 .social-links a:hover {
-  background-color: var(--primary-color);
+  background-color: #f15136; /* UPDATED from primary blue */
   transform: translateY(-3px);
 }
 
@@ -590,7 +590,7 @@ h1, h2, h3, h4 {
 }
 
 .contact-info i {
-  color: var(--primary-color);
+  color: #f15136; /* UPDATED from primary blue */
   margin-top: 4px;
 }
 
