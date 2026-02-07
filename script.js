@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /* --- COUNTDOWN TIMER --- */
-const targetDate = new Date("Feb 11, 2026 00:00:00").getTime();
+const targetDate = new Date("Feb 13, 2026 00:00:00").getTime();
 
 const timer = setInterval(function() {
   const now = new Date().getTime();
