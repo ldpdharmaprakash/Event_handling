@@ -61,6 +61,14 @@ h1, h2, h3, h4 {
   z-index: -2;
 }
 
+/* Default state: Desktop video shown, Mobile hidden */
+.mobile-bg {
+  display: none;
+}
+.desktop-bg {
+  display: block;
+}
+
 .hero::before {
   content: '';
   position: absolute;
@@ -634,6 +642,14 @@ h1, h2, h3, h4 {
   /* Fix Hero Logo Overlap */
   .hero {
     padding-top: 100px; /* Push content down so logos fit */
+  }
+
+  /* VIDEO SWITCHING FOR MOBILE */
+  .desktop-bg {
+    display: none;
+  }
+  .mobile-bg {
+    display: block;
   }
 
   .corner-logo {
