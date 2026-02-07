@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 :root {
   --primary-color: #667eea;
   --secondary-color: #764ba2;
@@ -37,16 +36,15 @@ h1, h2, h3, h4 {
   font-weight: 600;
 }
 
-/* HERO SECTION */
 .hero {
-  min-height: 100vh; /* Fallback */
-  min-height: 100dvh; /* Dynamic height for mobile browsers */
+  min-height: 100vh; 
+  min-height: 100dvh; 
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 80px 20px 20px; /* Added top padding for mobile logos */
+  padding: 80px 20px 20px; 
   overflow: hidden;
   color: white;
 }
@@ -61,7 +59,6 @@ h1, h2, h3, h4 {
   z-index: -2;
 }
 
-/* Default state: Desktop video shown, Mobile hidden */
 .mobile-bg {
   display: none;
 }
@@ -76,7 +73,7 @@ h1, h2, h3, h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Slightly darker for better mobile text readability */
+  background: rgba(0, 0, 0, 0.6); 
   z-index: -1;
 }
 
@@ -178,13 +175,12 @@ h1, h2, h3, h4 {
   font-size: 1.2rem;
 }
 
-/* COUNTDOWN TIMER STYLES */
 .countdown-container {
   display: flex;
   gap: 15px;
   margin-bottom: 30px;
   align-items: center;
-  flex-wrap: wrap; /* Ensure wrapping on very small screens */
+  flex-wrap: wrap; 
 }
 
 .time-box {
@@ -195,7 +191,7 @@ h1, h2, h3, h4 {
   border-radius: 12px;
   text-align: center;
   min-width: 70px;
-  flex: 1; /* Grow on mobile */
+  flex: 1; 
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
@@ -217,7 +213,6 @@ h1, h2, h3, h4 {
   margin-top: 5px;
 }
 
-/* CTA BUTTON */
 .cta {
   display: inline-flex;
   align-items: center;
@@ -239,7 +234,6 @@ h1, h2, h3, h4 {
   box-shadow: 0 10px 20px rgba(238, 90, 36, 0.5);
 }
 
-/* STICKY NAVIGATION & TABS */
 .sticky-nav {
   position: sticky;
   top: 0;
@@ -265,7 +259,6 @@ h1, h2, h3, h4 {
   flex-wrap: wrap;
 }
 
-/* BUTTON DESIGN */
 .tab-btn {
   display: flex;
   align-items: center;
@@ -280,7 +273,7 @@ h1, h2, h3, h4 {
   font-weight: 500;
   color: var(--text-light);
   font-size: 0.95rem;
-  white-space: nowrap; /* Prevent text breaking */
+  white-space: nowrap; 
 }
 
 .tab-btn .icon-box {
@@ -309,14 +302,11 @@ h1, h2, h3, h4 {
   color: white;
 }
 
-/* Individual Active Colors */
 .tab-btn[data-tab="communication"].active { background: var(--comm-color); border-color: var(--comm-color); }
 .tab-btn[data-tab="creative"].active { background: var(--creative-color); border-color: var(--creative-color); }
 .tab-btn[data-tab="technical"].active { background: var(--tech-color); border-color: var(--tech-color); color: #000; }
 .tab-btn[data-tab="tamil"].active { background: var(--tamil-color); border-color: var(--tamil-color); }
 
-
-/* EVENTS CONTAINER */
 .events-container {
   padding-bottom: 80px;
   background-color: var(--bg-light);
@@ -364,7 +354,7 @@ h1, h2, h3, h4 {
 
 .events-grid {
   display: grid;
-  /* Optimized grid for mobile: fits better on small screens */
+
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
   gap: 25px;
 }
@@ -428,7 +418,7 @@ h1, h2, h3, h4 {
 }
 
 .btn {
-  padding: 12px 15px; /* Larger touch target */
+  padding: 12px 15px; 
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.9rem;
@@ -448,7 +438,6 @@ h1, h2, h3, h4 {
   color: white;
 }
 
-/* Utilities */
 .hidden { display: none; }
 .tab-pane { display: none; animation: fadeIn 0.4s ease; }
 .tab-pane.active { display: block; }
@@ -458,7 +447,6 @@ h1, h2, h3, h4 {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* MODAL STYLES */
 .modal {
   display: none;
   position: fixed;
@@ -474,7 +462,7 @@ h1, h2, h3, h4 {
 .modal-content {
   background-color: white;
   margin: 5vh auto;
-  width: 95%; /* Wider on mobile */
+  width: 95%; 
   max-width: 800px;
   height: 90vh;
   border-radius: 12px;
@@ -503,7 +491,6 @@ h1, h2, h3, h4 {
   border: none;
 }
 
-/* PROFESSIONAL FOOTER STYLES */
 .main-footer {
   background-color: var(--footer-bg);
   color: var(--footer-text);
@@ -539,7 +526,7 @@ h1, h2, h3, h4 {
   bottom: -8px;
   width: 40px;
   height: 2px;
-  background-color: #f15136; /* UPDATED from primary blue */
+  background-color: #f15136; 
 }
 
 .footer-col p {
@@ -562,7 +549,7 @@ h1, h2, h3, h4 {
 }
 
 .footer-col ul li a:hover {
-  color: #f15136; /* UPDATED from primary blue */
+  color: #f15136; 
   padding-left: 5px;
 }
 
@@ -586,7 +573,7 @@ h1, h2, h3, h4 {
 }
 
 .social-links a:hover {
-  background-color: #f15136; /* UPDATED from primary blue */
+  background-color: #f15136; 
   transform: translateY(-3px);
 }
 
@@ -598,7 +585,7 @@ h1, h2, h3, h4 {
 }
 
 .contact-info i {
-  color: #f15136; /* UPDATED from primary blue */
+  color: #f15136; 
   margin-top: 4px;
 }
 
@@ -610,26 +597,24 @@ h1, h2, h3, h4 {
   color: rgba(255,255,255,0.5);
 }
 
-/* --- MOBILE OPTIMIZATION MEDIA QUERIES --- */
-
 @media (max-width: 900px) {
   .hero-layout { 
     flex-direction: column; 
     text-align: center; 
     gap: 30px; 
   }
-  
+
   .hero-image-col, .hero-text-col { 
     flex: 0 0 100%; 
     justify-content: center; 
     width: 100%;
   }
-  
+
   .hero-text-col { text-align: center; }
   .event-meta { justify-content: center; }
-  
+
   .image-frame {
-    max-width: 220px; /* Smaller image */
+    max-width: 220px; 
   }
 
   .footer-row {
@@ -639,12 +624,11 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
-  /* Fix Hero Logo Overlap */
+
   .hero {
-    padding-top: 100px; /* Push content down so logos fit */
+    padding-top: 100px; 
   }
 
-  /* VIDEO SWITCHING FOR MOBILE */
   .desktop-bg {
     display: none;
   }
@@ -653,7 +637,7 @@ h1, h2, h3, h4 {
   }
 
   .corner-logo {
-    height: 50px; /* Smaller logos */
+    height: 50px; 
     top: 20px;
   }
   .logo-left { left: 15px; }
@@ -662,40 +646,38 @@ h1, h2, h3, h4 {
   .hero-text-col h1 {
     font-size: 2rem;
   }
-  
+
   .countdown-container {
     justify-content: center;
   }
-  
+
   .time-box {
     min-width: 60px;
     padding: 8px;
   }
-  
+
   .time-value { font-size: 1.3rem; }
 
-  /* Swipeable Tabs for Mobile (App-like feel) */
   .tab-navigation {
     justify-content: flex-start;
     overflow-x: auto;
     padding-bottom: 15px;
-    padding-left: 20px; /* Start padding */
-    padding-right: 20px; /* End padding */
-    margin: 0 -20px; /* Negative margin to extend scroll area */
+    padding-left: 20px; 
+    padding-right: 20px; 
+    margin: 0 -20px; 
     -webkit-overflow-scrolling: touch;
     flex-wrap: nowrap;
-    scrollbar-width: none; /* Hide scrollbar Firefox */
+    scrollbar-width: none; 
   }
-  
+
   .tab-navigation::-webkit-scrollbar {
-    display: none; /* Hide scrollbar Chrome/Safari */
+    display: none; 
   }
 
   .tab-btn {
-    flex: 0 0 auto; /* Don't shrink buttons */
+    flex: 0 0 auto; 
   }
 
-  /* Full width Modal */
   .modal-content {
     width: 100%;
     height: 100%;
@@ -703,17 +685,15 @@ h1, h2, h3, h4 {
     border-radius: 0;
   }
 
-  /* Force single column for events on mobile/tablet */
   .events-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  /* Stack buttons for easier tapping */
   .card-footer {
     flex-direction: column;
   }
-  
+
   .btn {
     width: 100%;
   }
@@ -725,7 +705,7 @@ h1, h2, h3, h4 {
     text-align: center;
     padding: 15px;
   }
-  
+
   .coord-text {
     align-items: center;
   }

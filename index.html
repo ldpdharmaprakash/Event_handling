@@ -1,506 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FACE PREP CAMPUS</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="icon" href="assets/fpc_logo.png" type="image/png">
 </head>
+
 <body>
 
-<section class="hero">
-  <video autoplay muted loop playsinline class="back-video desktop-bg">
-    <source src="assets/bg_pc.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <section class="hero">
+    <video autoplay muted loop playsinline class="back-video desktop-bg">
+      <source src="assets/bg_pc.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
-  <video autoplay muted loop playsinline class="back-video mobile-bg">
-    <source src="assets/bg_mob.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+    <video autoplay muted loop playsinline class="back-video mobile-bg">
+      <source src="assets/bg_mob.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
-  <a href="https://www.bcas.ac.in/" target="_blank">
-    <img src="assets/bcas.png" alt="College Logo" class="corner-logo logo-left">
-  </a>
+    <a href="https://www.bcas.ac.in/" target="_blank">
+      <img src="assets/bcas.png" alt="College Logo" class="corner-logo logo-left">
+    </a>
 
-  <a href="https://faceprepcampus.com/" target="_blank">
-    <img src="assets/fpc.png" alt="FACE Prep Campus" class="corner-logo logo-right">
-  </a>
+    <a href="https://faceprepcampus.com/" target="_blank">
+      <img src="assets/fpc.png" alt="FACE Prep Campus" class="corner-logo logo-right">
+    </a>
 
-  <div class="hero-content">
-    <div class="hero-layout">
-      
-      <div class="hero-image-col">
-        <div class="image-frame">
-          <img src="assets/person.png" alt="Guest Speaker">
+    <div class="hero-content">
+      <div class="hero-layout">
+
+        <div class="hero-image-col">
+          <div class="image-frame">
+            <img src="assets/person.png" alt="Guest Speaker">
+          </div>
         </div>
+
+        <div class="hero-text-col">
+          <h1>FACE PREP CAMPUS</h1>
+          <p class="college-name">Bharathidasan College of Arts and Science (Autonomous)</p>
+
+          <div class="event-meta">
+            <span class="meta-item"><i class="far fa-calendar-alt"></i> 11th February 2026</span>
+            <span class="divider">|</span>
+            <span class="meta-item"><i class="fas fa-university"></i> Intra Campus Event</span>
+          </div>
+
+          <div id="countdown" class="countdown-container">
+            <div class="time-box">
+              <span id="days" class="time-value">00</span>
+              <span class="time-label">Days</span>
+            </div>
+            <div class="time-box">
+              <span id="hours" class="time-value">00</span>
+              <span class="time-label">Hours</span>
+            </div>
+            <div class="time-box">
+              <span id="minutes" class="time-value">00</span>
+              <span class="time-label">Mins</span>
+            </div>
+            <div class="time-box">
+              <span id="seconds" class="time-value">00</span>
+              <span class="time-label">Secs</span>
+            </div>
+          </div>
+
+          <a href="#events-section" class="cta">Explore Events <i class="fas fa-arrow-right"></i></a>
+        </div>
+
       </div>
-
-      <div class="hero-text-col">
-        <h1>FACE PREP CAMPUS</h1>
-        <p class="college-name">Bharathidasan College of Arts and Science (Autonomous)</p>
-        
-        <div class="event-meta">
-          <span class="meta-item"><i class="far fa-calendar-alt"></i> 11th February 2026</span>
-          <span class="divider">|</span>
-          <span class="meta-item"><i class="fas fa-university"></i> Intra Campus Event</span>
-        </div>
-
-        <div id="countdown" class="countdown-container">
-          <div class="time-box">
-            <span id="days" class="time-value">00</span>
-            <span class="time-label">Days</span>
-          </div>
-          <div class="time-box">
-            <span id="hours" class="time-value">00</span>
-            <span class="time-label">Hours</span>
-          </div>
-          <div class="time-box">
-            <span id="minutes" class="time-value">00</span>
-            <span class="time-label">Mins</span>
-          </div>
-          <div class="time-box">
-            <span id="seconds" class="time-value">00</span>
-            <span class="time-label">Secs</span>
-          </div>
-        </div>
-        
-        <a href="#events-section" class="cta">Explore Events <i class="fas fa-arrow-right"></i></a>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="events-section" class="events-container">
-  <div class="sticky-nav">
+  <section id="events-section" class="events-container">
+    <div class="sticky-nav">
+      <div class="container">
+        <h2 class="section-title">Event Categories</h2>
+
+        <div class="tab-navigation">
+          <button class="tab-btn active" data-tab="communication" onclick="showTab('communication')">
+            <span class="icon-box"><i class="fas fa-microphone"></i></span>
+            <span class="text">Communication</span>
+          </button>
+          <button class="tab-btn" data-tab="creative" onclick="showTab('creative')">
+            <span class="icon-box"><i class="fas fa-paint-brush"></i></span>
+            <span class="text">Business</span>
+          </button>
+          <button class="tab-btn" data-tab="technical" onclick="showTab('technical')">
+            <span class="icon-box"><i class="fas fa-code"></i></span>
+            <span class="text">Technical</span>
+          </button>
+          <button class="tab-btn" data-tab="tamil" onclick="showTab('tamil')">
+            <span class="icon-box"><i class="fas fa-feather"></i></span>
+            <span class="text">Other</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
-      <h2 class="section-title">Event Categories</h2>
-      
-      <div class="tab-navigation">
-        <button class="tab-btn active" data-tab="communication" onclick="showTab('communication')">
-          <span class="icon-box"><i class="fas fa-microphone"></i></span>
-          <span class="text">Communication</span>
-        </button>
-        <button class="tab-btn" data-tab="creative" onclick="showTab('creative')">
-          <span class="icon-box"><i class="fas fa-paint-brush"></i></span>
-          <span class="text">Creative</span>
-        </button>
-        <button class="tab-btn" data-tab="technical" onclick="showTab('technical')">
-          <span class="icon-box"><i class="fas fa-code"></i></span>
-          <span class="text">Technical</span>
-        </button>
-        <button class="tab-btn" data-tab="tamil" onclick="showTab('tamil')">
-          <span class="icon-box"><i class="fas fa-feather"></i></span>
-          <span class="text">Tamil</span>
-        </button>
-      </div>
-    </div>
-  </div>
+      <div class="tab-content">
 
-  <div class="container">
-    <div class="tab-content">
-      
-      <div id="communication" class="tab-pane active">
-        <div class="category-info">
-          <h3>Communication Activities</h3>
-          <p class="subtitle">Speak • Persuade • Express</p>
-          <div class="coordinator-badge">
-            <img src="assets/img1.jpg" alt="Coordinator" class="coordinator-img">
-            <div class="coord-text">
-              <span class="coord-label">Coordinator</span>
-              <span class="coord-name">Ms. P. Priya Dharshini</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="events-grid">
-          <div class="event-card">
-            <div class="card-header">
-              <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=800&q=80" alt="JAM">
-              <span class="category-tag comm-tag">Communication</span>
-            </div>
-            <div class="card-body">
-              <h4>JAM (Just a Minute)</h4>
-              <p class="description">Challenge yourself to speak on a surprise topic for exactly one minute without hesitation.</p>
-              <div class="meta-info">
-                <div class="meta-item"><i class="far fa-clock"></i> 10:00 - 11:00 AM</div>
-                <div class="meta-item"><i class="fas fa-map-marker-alt"></i> Seminar Hall</div>
-              </div>
-              <div class="event-details hidden">
-                <p class="detail-row"><strong>Rules:</strong> No repetition, no hesitation.</p>
-              </div>
-            </div>
-            <div class="card-footer">
-              <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
-              <button class="btn btn-primary comm-btn" onclick="openRegisterModal('https://docs.google.com/forms/d/e/1FAIpQLSeI6Vo7eezxOKHSQhr28ns0QQNJ4zyRTA3_V8WU5_4m3cwKsg/viewform?embedded=true')">Register Now</button>
-            </div>
-          </div>
-
-          <div class="event-card">
-            <div class="card-header">
-              <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=800&q=80" alt="Convince Me">
-              <span class="category-tag comm-tag">Communication</span>
-            </div>
-            <div class="card-body">
-              <h4>Convince Me If You Can</h4>
-              <p class="description">Test your persuasion skills by selling a unique or fun idea to the audience and judges.</p>
-              <div class="meta-info">
-                <div class="meta-item"><i class="far fa-clock"></i> 11:00 - 12:00 PM</div>
-                <div class="meta-item"><i class="fas fa-map-marker-alt"></i> Room 102</div>
-              </div>
-              <div class="event-details hidden">
-                <p class="detail-row"><strong>Format:</strong> 2 mins pitch, 1 min Q&A.</p>
-              </div>
-            </div>
-            <div class="card-footer">
-              <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
-              <button class="btn btn-primary comm-btn" onclick="openRegisterModal('https://docs.google.com/forms/d/e/1FAIpQLSez8iDiAszslabdrC58bAC5zl2GZXmft2L07iArYU-qeIv-xQ/viewform?embedded=true')">Register Now</button>
-            </div>
-          </div>
-
-          <div class="event-card">
-            <div class="card-header">
-              <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80" alt="Picture Talk">
-              <span class="category-tag comm-tag">Communication</span>
-            </div>
-            <div class="card-body">
-              <h4>Picture Talk</h4>
-              <p class="description">Look at a random picture and weave a compelling story or description around it.</p>
-              <div class="meta-info">
-                <div class="meta-item"><i class="far fa-clock"></i> 12:00 - 12:30 PM</div>
-                <div class="meta-item"><i class="fas fa-map-marker-alt"></i> Seminar Hall</div>
-              </div>
-              <div class="event-details hidden">
-                 <p class="detail-row"><strong>Time:</strong> 30s think, 1m speak.</p>
-              </div>
-            </div>
-            <div class="card-footer">
-              <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
-              <button class="btn btn-primary comm-btn" onclick="openRegisterModal('')">Register Now</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="creative" class="tab-pane">
-        <div class="category-info">
-          <h3>Creative Activities</h3>
-          <p class="subtitle">Plan • Create • Design</p>
-          <div class="coordinator-badge">
-            <img src="assets/img2.jpg" alt="Coordinator" class="coordinator-img">
-            <div class="coord-text">
-              <span class="coord-label">Coordinator</span>
-              <span class="coord-name">Mrs. K. Bhargavi</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="events-grid">
-          <div class="event-card">
-            <div class="card-header">
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Pipe & Ball">
-              <span class="category-tag creative-tag">Creative</span>
-            </div>
-            <div class="card-body">
-              <h4>Pipe & Ball</h4>
-              <p class="description">A fun team building activity requiring coordination, strategy, and steady hands.</p>
-              <div class="meta-info">
-                <div class="meta-item"><i class="far fa-clock"></i> 10:00 - 11:00 AM</div>
-                <div class="meta-item"><i class="fas fa-users"></i> Group Event</div>
-              </div>
-               <div class="event-details hidden">
-                 <p class="detail-row"><strong>Team Size:</strong> 4 Members.</p>
-              </div>
-            </div>
-            <div class="card-footer">
-              <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
-              <button class="btn btn-primary creative-btn" onclick="openRegisterModal('https://docs.google.com/forms/d/e/1FAIpQLSc1bhm5LUUi6NCUQPFrSI_cC6-BJdK47Sb7v8oQFbqzWxMasA/viewform?embedded=true')">Register Now</button>
-            </div>
-          </div>
-
-          <div class="event-card">
-            <div class="card-header">
-              <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=800&q=80" alt="Poster Design">
-              <span class="category-tag creative-tag">Creative</span>
-            </div>
-            <div class="card-body">
-              <h4>Poster Designing</h4>
-              <p class="description">Unleash your artistic skills to design a creative and impactful marketing poster.</p>
-              <div class="meta-info">
-                <div class="meta-item"><i class="far fa-clock"></i> 11:00 - 12:30 PM</div>
-                <div class="meta-item"><i class="fas fa-user"></i> Individual</div>
-              </div>
-              <div class="event-details hidden">
-                 <p class="detail-row"><strong>Theme:</strong> Announced on spot.</p>
-              </div>
-            </div>
-            <div class="card-footer">
-              <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
-              <button class="btn btn-primary creative-btn" onclick="openRegisterModal('https://docs.google.com/forms/d/e/1FAIpQLSdFH5etDdSk1-gxJQsgC_mD0KAmQWKKAQGQnZMLwYtECLoQgg/viewform?embedded=true')">Register Now</button>
-            </div>
-          </div>
-
-          <div class="event-card">
-            <div class="card-header">
-              <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80" alt="Paper Art">
-              <span class="category-tag creative-tag">Creative</span>
-            </div>
-            <div class="card-body">
-              <h4>Paper Art</h4>
-              <p class="description">Transform simple paper into magnificent art pieces using cutting and folding techniques.</p>
-              <div class="meta-info">
-                <div class="meta-item"><i class="far fa-clock"></i> 11:00 - 12:30 PM</div>
-                <div class="meta-item"><i class="fas fa-cut"></i> Craft</div>
-              </div>
-               <div class="event-details hidden">
-                 <p class="detail-row"><strong>Materials:</strong> Bring your own.</p>
-              </div>
-            </div>
-            <div class="card-footer">
-              <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
-              <button class="btn btn-primary creative-btn" onclick="openRegisterModal('https://docs.google.com/forms/d/e/1FAIpQLSfayaNotM9Ag4Hf-mq6rozSpyMK-lHHhUzwy7X4y2jJpYaY1g/viewform?embedded=true')">Register Now</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="technical" class="tab-pane">
-        <div class="category-info">
-          <h3>Technical Activities</h3>
-          <p class="subtitle">Code • Debug • Design</p>
-          
-          <div class="tech-coordinators-container">
+        <div id="communication" class="tab-pane active">
+          <div class="category-info">
+            <h3>Communication Activities</h3>
+            <p class="subtitle">Speak • Persuade • Express</p>
             <div class="coordinator-badge">
-                <img src="assets/tech_coord1.jpg" alt="Mr. L. Dharma Prakash" class="coordinator-img">
+              <img src="assets/Coordinator/img1.jpeg" alt="Coordinator" class="coordinator-img">
+              <div class="coord-text">
+                <span class="coord-label">Coordinator</span>
+                <span class="coord-name">Ms. P. Priya Dharshini</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="events-grid">
+
+            <div class="event-card">
+              <div class="card-header">
+                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=800&q=80"
+                  alt="Convince Me">
+                <span class="category-tag comm-tag">Communication</span>
+              </div>
+              <div class="card-body">
+                <h4>Convince Me If You Can</h4>
+                <p class="description">Test your persuasion skills by selling a unique or fun idea to the audience and
+                  judges.</p>
+                <div class="meta-info">
+                  <div class="meta-item"><i class="far fa-clock"></i> 11:00 - 12:00 PM</div>
+                  <div class="meta-item"><i class="fas fa-map-marker-alt"></i> Room 102</div>
+                </div>
+                <div class="event-details hidden">
+                  <p class="detail-row"><strong>Format:</strong> 2 mins pitch, 1 min Q&A.</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
+                <button class="btn btn-primary comm-btn"
+                  onclick="openRegisterModal('https://docs.google.com/forms/d/e/1FAIpQLSez8iDiAszslabdrC58bAC5zl2GZXmft2L07iArYU-qeIv-xQ/viewform?embedded=true')">Register
+                  Now</button>
+              </div>
+            </div>
+
+            <div class="event-card">
+              <div class="card-header">
+                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80"
+                  alt="Picture Talk">
+                <span class="category-tag comm-tag">Communication</span>
+              </div>
+              <div class="card-body">
+                <h4>Picture Talk</h4>
+                <p class="description">Look at a random picture and weave a compelling story or description around it.
+                </p>
+                <div class="meta-info">
+                  <div class="meta-item"><i class="far fa-clock"></i> 12:00 - 12:30 PM</div>
+                  <div class="meta-item"><i class="fas fa-map-marker-alt"></i> Seminar Hall</div>
+                </div>
+                <div class="event-details hidden">
+                  <p class="detail-row"><strong>Time:</strong> 30s think, 1m speak.</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
+                <button class="btn btn-primary comm-btn" onclick="openRegisterModal('')">Register Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="creative" class="tab-pane">
+          <div class="category-info">
+            <h3>Business Activities</h3>
+            <p class="subtitle">Plan • Create • Design</p>
+            <div class="coordinator-badge">
+              <img src="assets/Coordinator/img2.jpeg" alt="Coordinator" class="coordinator-img">
+              <div class="coord-text">
+                <span class="coord-label">Coordinator</span>
+                <span class="coord-name">Mrs. K. Bhargavi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="events-grid">
+            <div class="event-card">
+              <div class="card-header">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+                  alt="Pipe & Ball">
+                <span class="category-tag creative-tag">Business</span>
+              </div>
+              <div class="card-body">
+                <h4>Pipe & Ball</h4>
+                <p class="description">A fun team building activity requiring coordination, strategy, and steady hands.
+                </p>
+                <div class="meta-info">
+                  <div class="meta-item"><i class="far fa-clock"></i> 10:00 - 11:00 AM</div>
+                  <div class="meta-item"><i class="fas fa-users"></i> Group Event</div>
+                </div>
+                <div class="event-details hidden">
+                  <p class="detail-row"><strong>Team Size:</strong> 4 Members.</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
+                <button class="btn btn-primary creative-btn"
+                  onclick="openRegisterModal('https://docs.google.com/forms/d/e/1FAIpQLSc1bhm5LUUi6NCUQPFrSI_cC6-BJdK47Sb7v8oQFbqzWxMasA/viewform?embedded=true')">Register
+                  Now</button>
+              </div>
+            </div>
+
+            <div class="event-card">
+              <div class="card-header">
+                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80"
+                  alt="Paper Art">
+                <span class="category-tag creative-tag">Business</span>
+              </div>
+              <div class="card-body">
+                <h4>Paper Art</h4>
+                <p class="description">Transform simple paper into magnificent art pieces using cutting and folding
+                  techniques.</p>
+                <div class="meta-info">
+                  <div class="meta-item"><i class="far fa-clock"></i> 11:00 - 12:30 PM</div>
+                  <div class="meta-item"><i class="fas fa-cut"></i> Craft</div>
+                </div>
+                <div class="event-details hidden">
+                  <p class="detail-row"><strong>Materials:</strong> Bring your own.</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
+                <button class="btn btn-primary creative-btn"
+                  onclick="openRegisterModal('https://docs.google.com/forms/d/e/1FAIpQLSfayaNotM9Ag4Hf-mq6rozSpyMK-lHHhUzwy7X4y2jJpYaY1g/viewform?embedded=true')">Register
+                  Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="technical" class="tab-pane">
+          <div class="category-info">
+            <h3>Technical Activities</h3>
+            <p class="subtitle">Code • Debug • Design</p>
+
+            <div class="tech-coordinators-container">
+              <div class="coordinator-badge">
+                <img src="assets/Coordinator/img3.jpeg" alt="Mr. L. Dharma Prakash" class="coordinator-img">
                 <div class="coord-text">
                   <span class="coord-label">Coordinator</span>
                   <span class="coord-name">Mr. L. Dharma Prakash</span>
                 </div>
-            </div>
-            
-            <div class="coordinator-badge">
+              </div>
+
+              <div class="coordinator-badge">
                 <img src="assets/tech_coord2.jpg" alt="Ms. Anupama" class="coordinator-img">
                 <div class="coord-text">
                   <span class="coord-label">Coordinator</span>
                   <span class="coord-name">Ms. Anupama</span>
                 </div>
+              </div>
             </div>
+
           </div>
 
-        </div>
-        
-        <div class="events-grid">
-          <div class="event-card">
-            <div class="card-header">
-              <img src="https://images.unsplash.com/photo-1561518776-e76a5e48f731?auto=format&fit=crop&w=800&q=80" alt="Bug Blaster">
-              <span class="category-tag tech-tag">Technical</span>
-            </div>
-            <div class="card-body">
-              <h4>Bug Blaster</h4>
-              <p class="description">Identify logic errors and syntax bugs in the provided code snippets and fix them.</p>
-              <div class="meta-info">
-                <div class="meta-item"><i class="far fa-clock"></i> 10:00 - 11:00 AM</div>
-                <div class="meta-item"><i class="fas fa-laptop-code"></i> Lab 1</div>
+          <div class="events-grid">
+            <div class="event-card">
+              <div class="card-header">
+                <img src="https://images.unsplash.com/photo-1561518776-e76a5e48f731?auto=format&fit=crop&w=800&q=80"
+                  alt="Bug Blaster">
+                <span class="category-tag tech-tag">Technical</span>
               </div>
-               <div class="event-details hidden">
-                 <p class="detail-row"><strong>Language:</strong> C / Java / Python.</p>
+              <div class="card-body">
+                <h4>Bug Blaster</h4>
+                <p class="description">Identify logic errors and syntax bugs in the provided code snippets and fix them.
+                </p>
+                <div class="meta-info">
+                  <div class="meta-item"><i class="far fa-clock"></i> 10:00 - 11:00 AM</div>
+                  <div class="meta-item"><i class="fas fa-laptop-code"></i> Lab 1</div>
+                </div>
+                <div class="event-details hidden">
+                  <p class="detail-row"><strong>Language:</strong> C / Java / Python.</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
+                <button class="btn btn-primary tech-btn"
+                  onclick="openRegisterModal('https://docs.google.com/forms/d/e/1FAIpQLScFe4aVKA1cWLd7_ExBOtfsbuqUEG7mFpxt2b-fmt0wLXCHkA/viewform?embedded=true')">Register
+                  Now</button>
               </div>
             </div>
-            <div class="card-footer">
-              <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
-              <button class="btn btn-primary tech-btn" onclick="openRegisterModal('https://docs.google.com/forms/d/e/1FAIpQLScFe4aVKA1cWLd7_ExBOtfsbuqUEG7mFpxt2b-fmt0wLXCHkA/viewform?embedded=true')">Register Now</button>
-            </div>
-          </div>
 
-          <div class="event-card">
-            <div class="card-header">
-              <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="Code Warrior">
-              <span class="category-tag tech-tag">Technical</span>
-            </div>
-            <div class="card-body">
-              <h4>Code Warrior</h4>
-              <p class="description">A competitive programming contest to solve algorithmic problems within a time limit.</p>
-              <div class="meta-info">
-                <div class="meta-item"><i class="far fa-clock"></i> 11:00 - 12:00 PM</div>
-                <div class="meta-item"><i class="fas fa-terminal"></i> Lab 2</div>
+            <div class="event-card">
+              <div class="card-header">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+                  alt="Code Warrior">
+                <span class="category-tag tech-tag">Technical</span>
               </div>
-               <div class="event-details hidden">
-                 <p class="detail-row"><strong>Platform:</strong> HackerRank.</p>
+              <div class="card-body">
+                <h4>Code Warrior</h4>
+                <p class="description">A competitive programming contest to solve algorithmic problems within a time
+                  limit.</p>
+                <div class="meta-info">
+                  <div class="meta-item"><i class="far fa-clock"></i> 11:00 - 12:00 PM</div>
+                  <div class="meta-item"><i class="fas fa-terminal"></i> Lab 2</div>
+                </div>
+                <div class="event-details hidden">
+                  <p class="detail-row"><strong>Platform:</strong> HackerRank.</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
+                <button class="btn btn-primary tech-btn"
+                  onclick="openRegisterModal('https://docs.google.com/forms/d/e/1FAIpQLSeFSJUDnZGpxhvOb-bfW55SRANoOyYrY8tNgQ86jmdIIO8mig/viewform?embedded=true')">Register
+                  Now</button>
               </div>
             </div>
-            <div class="card-footer">
-              <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
-              <button class="btn btn-primary tech-btn" onclick="openRegisterModal('https://docs.google.com/forms/d/e/1FAIpQLSeFSJUDnZGpxhvOb-bfW55SRANoOyYrY8tNgQ86jmdIIO8mig/viewform?embedded=true')">Register Now</button>
-            </div>
-          </div>
 
-          <div class="event-card">
-            <div class="card-header">
-              <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQA/AMBEQACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAACAQMEBQYHAP/EAFAQAAEDAgQBBQgMCggHAAAAAAEAAgMEEQUGEiExBxNBUWEiM3GBkaHB0RQVFzJCUlVykpOUshYjJUVTVHN0sdI0NjdEYmSCojVDVmPh8PH/xAAbAQACAwEBAQAAAAAAAAAAAAAAAgEDBAUGB//EAD0RAAIBAwEGAgYIBQMFAAAAAAABAgMEERIFEyExQVFhkRQiMlJxgRUjM0JTocHRJDRysfBDYuEGFmNk8f/aAAwDAQACEQMRAD8A44t42QggUIIFbCAQI2EAgXIQCCAggVs9ZBAQGyCArIIPIAVBGRW8QggWwAO48SkgFQSS6d45sAkXVsWkiqSyNVJBk2I2HQlmNAZSDj0UDZBqJTxjlCSlhjnsZnam0IXWwJKdoBLSdlEoLA0ZsjqstEIQSCgkRBORCEEgkIGyDayCUwSgcEhAyBsgZMRBIoQQEAgVhAIEYQCBGG0EkAdJUriQ2WVPhFRUNmdDZwgiM0lvgsFrnzhWuljmyrXkBuGvJsHg+AFS6L7ib1McGFTdf+wo3PiG88BfauUcXAeFpUbnxF33ge9rX/pB5FO5Yu+RHqoHU7w1xBuL7KqcXF4LIT1Ib2tclKSbDLvJtmHHaVtY2OGipXbtkrHFuodYaATbw2VUqsVwLVRbRdt5GsVedLcZwxx6gX3/AIJd8uxO48Q/cUxroxXD/I/1I367BuH3F9xTGvlXDvI/1I3/AIB6P4ie4pjXyrh/kf6kb9dg9HfcR/Ivi0YvJjGHNHWdY9CN+uwbh9wJOSXG4ICaWtw+reN+bjkIcfBcW86thcRXBlc7aXNMxdZR1NDVSUtbC+CoiNnxvFiFpjJSWUZnFrmRpO9u8CJcgXMgKgvyesgYGyCT1kEgoJyIUEoEoGyAQgdMEoGQJQMgUDZFCBWGAgVsIBAjDAQKw2HS4GxNj0KU8MVmiwTNXtM2qEVJDMapoa/noQ/SBfhfhx8wVk5wljOeBXGMlnBCo8abRTRTUxmjmi3ZIGi42t09hKd16b5or3EujLMZ6xT5Qqvq2epV5oe6Npq9xmtzZVV8PM1lTUTRXvpcxtr9HBNGdKPFISVKpLmyH7awfFl+iPWm9IiV+jS7kKsqW1NQwxAgNFu62VNSeuXAtpw0RwzY8k2AU2OZkM1eGupMPj9kSNdwJv3N+wWJVFWWFgvorLbZHztnPEsx4pMGVEsGGxuLYKeN5aNI2BdbiSphBJZFqVG3hFVlzHarAMcpMVgJldTuJMb3mzwWlpB8RKaUNSwLCbi8nVW8teHaRqweqBtuBK0qjcMv38Rfdrw35Hq/rGo3DDfxPHlrw0fmer+sajcMN/ExvKHyiOzZTU9HR0rqSlhk512p4L3usQOHAbnZWU6enixJ1dSwjLYTi9dh0gmpK6enmabhzZD5x0rRFRawyhuSeUdJx6aLO3J6MwviYzFMMeY6lzODmi1/EQQewqmH1VTT0L6i3lPV1OZtAneIo3AvkIa2y0Tkkmyi2ozr1Y04828FvDlRjx3dS+/WGi11zKl5o6Hsf+2aaSzU4kfG8tOw6jFXFMZIwQHhwsRfgUtvfxqz0NHL2hsj0WnvIyyupBwPCTi1RIznObjjbqe61yuvb0HWlg83d3atoKTWWy1lyrTx3tWSm3+ALoR2Wn94wQ2vKX3CgxOhNDPzevW0i7XWssN1bO3npbOrbV99T1YwQlmNCEKBgCEDIEoGTBIQOgUDBBArCCBGEECsMIFDjbqe0dZspXFivkazLOTn5hlqGUjQBA1moufbunkho4dhVtXd00s9Sqnrm+BXjBmmrfSc2DOxzmEc4AAW3vufAVYqcGslLqSzgKPBmPEOlg/HBxZeQC+kXN99vGocIcSN5IR2Fwsjje+PuZL6bPF9jY7eFSqUGI6s0CMOp/inyqd1EXfSIOIwsp5mMjvYi5uqKsVF4RfSk5Ryzo3It3rMn7l6HLJW6Gyh1OZ238qvRmfNnhx42QA7FzBZ+MMgN+gJlp6iNz6BEUnxpfIFP1YfWAuFJY91Jfo2CMQ6DLX1I5PSkLEgTwsglI6hkQ35Js3f6/uBUT+0RdH2Gc/wYXxWjFhvIB501Z4pyZZsx4vKT8UdqyrU0FHhddDiMYl5xw0w2uXbdC4UbqnGDcz1u06VerXpypcMLmZbOsTW5cqXNbpbzjbN46RfYLJsyrrvYr4mfa0m7RqTyzJZNfonqdWzNLb26r7r6BsxZlLB872msxinyybqaTBjAynkqKcRipMjn867UWEDa1uO3gWqKu1PWovljkghRoaNHDn3OZ4vqnkjdtcM6Uu2YPeRXgabRKEWisfGWGxXFaaNyYBUDAlAyYBCBkCUDgoGCCBWEECsIIEYQQKG3YgjiN1KIZY0eP4tQazQVUlKXgB5he9heBwvY79KZ1HLg1krUIx6iurKp7i9+hznblzg4knr4q1VJlLjAR9ZUta4iOLyH1odSaXIFCDGvbOr+JF9E+tV7+ZO5pnvbOr+LD9E+tG+mG4p+IzNNLUyNfNpBAsA0WCSUnPmOoxhHCOm8i3ecy/ufocs9boaKHJnM77q5Gd82e8akg9cdiAHRNFpF6Vp6+7KdSj2I0SfUYe5rnEtYGjqBuleHyHSxzA8qjAyEN1OCTqGQv7Js3f6/uBZ5/aIuj7DObRvdG9r4zpc03B6irmk1hmaE5QalHmi+jzli8QAHsZ3z4T6CubPZFtN5efM6/03d4w8eRHxfMGKYtTinq3xiJrrlkbNIJ7d7q222Zb2s9dNPPizHc7QrXK0zfArKapmo5dcLtLiLHbiupRrToy1QMFSlGqsTJDcRqJn6X6QLXuAt8NrXOenkU+jU4cUec50h3Nz2qitWnXlqmyxYS4EWrYQ5pNtwss1xLoMikKsuQJQSgCgZAlA6BQMKEChhArCCBWEgRhBBAQUisnNczSDqHBWprBS0xJnN5pwDrkhRJrBCTyRmM1ute11UkO2SfYzPjFW7sq1s0eXcEoqimfUVLOdJdpaCdhZbrW1pzjqlxOTtC+q0pqEOBp8IazBRUDDWinFSzRLp+EFpdjQl90wx2ndx5SKt+C4Z+pxJ1ZUfdIV/c+8xl2DYb+pxp1ZUfdHV9ce8MvwfDbG9Kwdo2Teg0H90tje3HvGProm01dPTsOoRvsCe0X9K4FaCp1HBHoqUnOmpPqjo2V8q4VLgdLU1tO2onqIxK4v+DcXAA7AvEbT2tdRuZU6csKLxwPT2VhRdFSkstlr+CmAfJkPkXP+l778Rmv6Pt/dGn5WwED/AIbD5Cro7Tvn/qMdbOt39wlUtPT4fhlVhtHGyKiqu/QgbP2tur43103lzZctm23uFFWZcwp8D2Mpmxn4L28QVtoX9wpLVLJE9j2s4NKOGc5ds57Cd2uIuvTxepJniKkNEnHsHIwl7nWda6dorTBk98oZKEY4sdqHFCeGS1ngOsqSHXLW8CrFUIcBpxe9zS5tkrbY8UkMFIWIEoJQJQMgCgdAoGCCCAggRhhApJhjYWXdvvwVsY5RVJhSxBrQQ2wJRKKQqlljQ4261Vw6jriXHtfRYaxvtw+V05FxSQEAtHRrceHgCw+kVa3CgsLu/wBDSqNKl9s+PZFfVOgfO51LE6KI8GOdqI8a101NRxN5ZmqODl6iwhIGnW12k6b2vba/VdWxa1JFU09OcE0bK4zmtywfyUP2jl1LL7M8/tP7b5Fk963KJgSGHvTpFiQw5+6dItSGXuTpYLYow+LG+MVnzx90Lyt7/Mz+J6e2/lofA7BlP+q+FH/KR/dC+YbT/nav9TPb2fGhH4FhJJtss0IZNiiRZJeO62QgXxgRZZBYrZTgXxiRJpO5PgW2lDkWaeByp3f5v2jv4r09P2UfM7j7SXxZNpqNj4TU1UnM097A2u556mj0rRGGVqk8Ixzq4eiCzL8l8RqrfSOaBSwytcD3T3yX1DwdCWThyiNTVT77z8ERSkLREEhRRmQFwPSmjHKIcsCTRFjb3upcRlLIyUhYgSgZAFAyBQOKEEMMIEYYQKPxS6W2IurFLCKpRLGScSxNba1rK5zTSKNDTyHgTY24nLVStD20cMlRpPBxaLjz2XLv23T0L7zS8/8Ag32SWvU+iyM4bQ1GNYg+LngJ3tMjpJL90dQHEfOvfgACr/VhFYKeNSTb5k6XLVQyOSSOoilayPnNmkEjsB8fkQp5DdkXCXamz0zrFsjNY7HN3B9CWSxKM/H8jTaLewqUX1WV8UeuOtbTkmqy478mf63LrWK+rODtJfXfI0uB2MWJFzRtRuPnCm74Sp/1IewitNXPujOVyHY9TAgEHVx8BT7QX8PL5DbNX8QvmMzW/BF7rC4xa17b25pNT/nV/R+pbpXoj/qKB7l08cDMkYvFD+Vqr5w+6F5G9/mp/E9Jbr+Hh8DruWX2yvhY/wApH91fNdowzeVf6me5sY/UQLrHHaZoP2DP4LTdQ9aPwQ1j7EvixqqqH09BhdRCQJGmQi4vfcbFa4rTGm14j06UalWtCXJ4DqWQUFKMapojapFqaFzdoHm+onsFjZbI01FbxdSunKpXn6JN40833XTz6mUnkJDiTckG5PSnpwO+o4WDmZ77N88/xXcp8kfLbj7SXxZY4u5vtkaYuDYKa0LLgkNA98du25V9fhLHRcDFbLMFJ85cf8+RMZlieQ2iq4XO5zmyHMc2ztIdYk9O9vEVn1o2bsp62mfSVMkEoGthsT19qZPIjWHgYPBSQPQPDQ4k23VkHhEPOSS4QvpQdi+6u9VxFWdRBqGhpAAA26FRMuiRykLEAUDoFA4oQKwwgVhBAjC2PFBDCBcOBNvCpyI0WOCTRxVuie4hqI3QSG/AOFr+JZrqLlTzHmuPkaLSUY1cS5PgR54ZqOd8MupkjLg2JF/GOgq2E41EpRKqtOdKTiwOclLrmSQngTqPDypsIq1Nkyj/ABFLNVEWuDHGO08fIkksvSdG1W4oTuJfBfF8/Ihq3icvCNhld1sJH7Ry7mzvsjg7TX13yNBhWIigqS+WPnYJWOjljDrEtPV29K03Fu60MLg1xRVa1VRk2+T4Mfgr8IwuR9TQGtnqtBbCJ2MYyMkWu4gkuI6Ngqp0LqulCphLrjPE106lvReullvx6FW6vjGXfa7ujN7O9kXttp5vTx67rZGhL0re9NOPnnIimtxu+uclS9y3YK0jIYkfytU2+P6AvHX381U+P6Ho7dfUQOsZbfbLeGfusf3Qvn97DN3U+LPd2K/h4fAuZqyiq4Ym1jqmKaJvN85Cxrw9vRcEixWiOiokpZTXDI0KFelN7pJp8eOeBFq66jqJ6WF8c7MPpwRYEGR4vc36AT5lpWmWFySLqVvWpwnJYc5eS/8Ag17e89V1Ar470VQ3m3Qs4RNHvNA62+dbINt8eQz2c401uX68eOX1758GUMrr6gCSN7Ei11aklyOsk9PE53/zpR/jP8V0ockfKLj7WXxZOxQc9P7Lb7yo7r5rvhDy3WiusveLkzFQ9WO7fOPAhmSS1jI/c6iNR49aowjRlguJcSS4uPWVOA+IJQCEPBAwTZS1tgB40ylhBjIEjy83NvEobyOlgbKgZAFA6AQOhQgVhhArHqdoe46uFk8EVy5DkrGtZdo3upklgRDYVZLCFroI5k+PEA6JkVbEJ2s2Y69ntHUD1Kp0sNyi/wBjZC7i4qFaGpL5PzE56hYdTKSRxHRJJt5lOmT5sZV7KHGNJt+L4DNTUSVDg6S2ws1o4NHUE8Vp4IyV6868sy4dF4LwGlJSzV5YeDhugG72vN29Iuu9strdfM4e0YPe5x0LF7l1kjAkMPcrEi1IZe5OkWpDDze6bBbFGTrXtfiNS5rgQX7W8AXi72SldTa7noKMcUopnT8s1DZMuYfzbg7TA1pt0ECxC8Vd02rmba6nvdmuMraGOxLlkUwgdOMSJJJ2rZTgXxiR3OueIutSjgtSG3va2NznEAAG5PQmXMWpJQi5S5IwkEQldI8ONi4kHxrqU4ZifIrma3ra7sOOYwF8Ys6MmzmOGxVtOq6fq80Vyip8ep50lMeEL29mvZWa7d84v5MhKfcakl1N0tbpZ1D0palfVHRFYj/nN9R1HuNLOMjxB6lOBkwS077E+BQSCQekEIGQJQMAUDIFBYjwQKwwUCsNji33pspTwIwy97hZxuEN5FweCggc7kAXbe/amFCGkg2FrC6BXwBCUCfDg+IzMa+OkeWu4G4HpVMrilHnI3w2VezipRpvDHH4DikbdUlKWNva7pGgfxSK8oPlIWWzLuHtQx80Q6iGpo5XRytkhlA3F7beHpWinUUlqgzHUpyi8TXE3PJXhzcUix01kj5DDSaml7y6x34XUVK1SOPWfmW0oQkn6q8kc8D6l1wKic2P6V3rVqqVWvafm/3FcYLovIS9Vfv1R9Y5Trq+8/N/uGmHZeQLvZB2MtQR1F7ka6vvPzYyjDsgAwt4tI8SrxpHyebUS05cIqmWHVuQyUtv4QColSU+ayW06k4LEG0e9sKv5QqftDvWk3Mfd/It9Jr++/NiGuqf1+o+vd61O6iug3pVf335s6LkqiFdya5lr5ppJJqfVoe55JbZoOxVUklLGCJXVfDe8fmzHQUeJ4hTTyQsraqCEAyuaXPawdvQrMRi+JklcV6qw5Nr4keKQxt7l4t4Vam0ZWs8xNQJO4uT1oYCFQAlx1qcEiX7bboXMnoSJZYzGQCD1KxtYFisMi7d0b32VeGWsTgOFkDIbKgZAlA6AQOKEEMIIEDCBQkCsIcQgVjli4C3QFIvIINLQb9VlKFfE9C9rZWPc3UGvBLfjWN7KuSymPTlGE1KXFJo6RQ4lh0kTHtrIACODngEdhC85Xp18taX5H0JbTtpwTU0VGcqNuLGkkoq2kkbEHB8RmaLEkWdvsVds6o6LkqkGn3wzg7WnG4cXTmuHiUeNzQmCgpWSsqJaWAsklYbgm9w0HpsulaRlmdRrCk+C/zucO7qJqEc5a5s2/Iv3rMn7l6HK6v0K6HJnOsPtpkNt9S30OT+RRV5kklXipAEqR0MVXeH9g8KSp7JZBcT2F4ziOG074qFkJY5+p2umbIb2A4kdQGy5Neyp3EtU858Hg2U7mVHgsfMlHNONnjHTfYW+pVfRdFd/Nl62hPw/In0E+bsUoKqvocOjmpqUXlkbRsAG1z0b7KHZUIvHHzYyv6r5Y8kazJ1TJX8nOYsRqi0VdPq5oRjQ09yCLsGzvHdJOzpqa5+bB7QqpPGPJFFgnKFjeCYbXUUNJSSiq3DnxaebcW6SbN2dsBstat1H2TBUvJVnma8uBm4q6sYwNLY9hbvI9S1apGUI4hVkEFrNx+gCNTIITQNYv0uSrmQzR07aNrHCoZNaw08yWi3huFfVjVyt1hfHiVUZ0c/Xavlj9RaeinrZJhh9LNOImGR2kai1g6TZW5wlrwQ0nJ7tPHjzIZtx6OsKcIVNjcjWlpBDSD1qJRWCxN5KIG9/CsRswIUDIAoGQKBxQghhBAjDCBRQgVhAoFCCCMEiOnLmBxdYHsVig8ZK3JZwJRwyVdVBSwW52olZFHq2Gpzg0X7LkKt8OLHisvB02PJGWqWrhoa8V1S/UI5KkS6Luva4YBs2/Re65FPabq1HFLkd+nsVyob3PHGcGsHI7lgi96y/wC2Wzez7nJ3UDl/KNlIZSxaKCCd01LUML4S8d02x3B6/Ur6c9aKKtNQfA0PIv3nMn7l6HJK/QehyZzig97J4Vvt+T+RXUXEkErQIgCUDpDNSfxD/Akqeyy2KeeBHpMVraGN0dNUc2xx1Fosd+HoWaFWpBeqxattSrPM1kcdmDE3e+rT5An9Ire9/nkIrG291ef/ACW2E8oWP4VhNZh1NUxuhqgQXSMBcy4sdKoqqVWalN8TRTpQpLTBYRrcixsrOTLMmIVQbLVU2oQyu4ss0WVU6k1NLJMoxUWYY4nW2/pHmC0a5GJEiGTGZqWargiq5aWDv08cJLI/nOtYeNK6mObGUW1lEZ2JVbmkGdxBFuAU65dyCKO+N23uFC5kM0EejXaUXB6b7jtW5Y5mCXgSKXEqzDRJ7W1To3zMLJXRj3zT8HcInTg8JltOcllkGzGA23BPcs6gn9VcWTxYJhe5mpjHEEKXDK1RHUlnDZnQCC64tuVzMNG885BKGygdAoGFCCGGCgVhAoEYQQQwkCsJpUisdbK5rdIdcKVJ4wJpTeRGPcxzXxuLXscHMcOLSNwR40oy4M3FPykytmiqavA6Spq2WJl59zA53xi2x3WGNhSjNzj1OlHaldUd1ngXnu34j8hUn2l38qv3PiZN+uxhc2Zmr804p7Or9DNLdEUTPext6u3wq2EFFYRRObkzZ8i/ecy/uXocqq3QtodTl9PUcyHAtvcrXTqaURKOWOGub8R3lVu/8AUAXVrfinyo367DqI1LVB7C0NtfrSyq5WBlEk4ZjlbhcL4aUUxY9+s87A15vYDifAFzq9nSrvVPPyeDTSrTprEf7El2bcUPwKH7I1VLZlBd/NlyvKvh5IA5qxM/AovsrUy2fRXfzYyvq3h5I6JkyokxHk2zJiVRpFRTaubEbdDNmg7tGx8arla04yws+Ysr+sk3w8kYT28rDxFP9Q1afRYLuZlta47LyRcUfKBitBlyvwVlPSvhq2PZzpZYxh4s7ueB6ePnTKjFNNFNW8lWeZc/AzwxKoLS081Yi3ewtGtmQinsSkhurKsCzZPME+8mupCpx6oE1tZ0yD6IUb2fcndQ7Cey6s/DaLdllKqT7jaIdiX7MrnQBhnBbp30q9VajjjJXu4J8iFM0CO3aqZLC4l6eSOVWWIAoGQKBzwQDDBQIwggTAQKBWEghossGwx2JSSDnObZGBqIFzv/APCq6tXdrJ0tl7Md/OS1YSL6PJ7H/wB8k8UY9awT2jo6HXf/AE1TX+o/Iosawx+E1xpnyCQFoe1wFrgrXbXCrw1o87e2jta27byBh2H1OIy81SsBIF3OJsGhbadKVR4ic2tXp0Y6pskYhglVQRmSR0cjBxMe9ldVs6tOOp8iqjeUqzxHgVyyGk6byL96zL+5+hyordDTQ6nJyTfcq9dBuonSpJSLClwLE6ynbUU9Pqif71xcBdXQt6s1lLgZat/b0ZOM5cUG7LuLDjTt+sCf0K4f3RY7TtH9/wDIbOAYmBvTj6YTegXHujraNr7xAq6WejlEVSzQ+17XWerSnSliawa6NWnVjqg8jKrLcHWeTv8Asizd4X/cCzz9tFdT2WY3B8KZXQvlklc0NdpAaN72v6V2LOzVwnJvkcO6unQailzJwy9C97Y45ZnPc4NDbDcnoW17KpJZcmURv6jfsk48n2KD+4V/0As6tbL8U1Kdz7gxU5IxGmhfNPRVscUY1Oe5gs0dashY2c5KMauWyXVuEsuBUOwqEbmSTzLX9CUveYiu5ditq4RBKWB1+lca9tfRqujOTbSnrjkZbchwHErKW8gxK9jS3ayZSaDCY1JIX8bKHJsdIaKUdAlAyAQOeCAYQQIwwgRhBAoQQQzWZBY2SWsDr2vFc9Q7pc7aMtKiek/6dk4qq14fqdPZSU3Mtg1UwZG955xru7cLHTv0riVqsGsZR0N7VUnP1stLh08TmXKGzRjcI2v7Hbt4yunsOWq3b8Tzu2mncLHYXJ1XBBT1DJGanc4HOaHaS9tuF/Ddev2dHUpRi/WPI7RpuU4Sayi0zbimH1kzTh8Do2c0GyEvJDu5G1iBa2+/SupbUalGjL0lrHEZxhKcXTWMGOMDA0nTuB1rzOjgbtTydD5FO7GY4md091ELAdPvgslbobaHU5M67XOa4WNyFeuSHS4g9PC6BsGywbMuHUuEU9PUSPZJEzS4c052/iC61teUadNRk+J5692XcVbiVSC4Nmii5ScLihZEKCgeGNDdT6R5Jt1qmU7aUs72S8/2NMLe6hFRdKP5FXjOdcOxMxWhgpub1f0emc3Ve3Hyeda7a8taGfXk890/2ErWVxWx6iWOxjMerYa6rZJAXFjWWu4WWK/uKdepqgdOwoToU9MitWE2nWuT/wDF8jubJJO5Y5zwD19wFnnxqIrqcmYfDMVdh8T4zGHsc7ULusb/APoXXtL126aayca4tlWaeeRKOYRcEQWIN9pOHmWz6X/2FEdn4+8OOzbV/paj7U5Kto0vwV+X7F6tqnvsakzNUyMLHyTua4WLXVBIPiTR2rSi8qivyG9Hnyc2RHYtc94/3/8AhW/Tv/j/ADBWn+4g1M5nkLyA3qC5N5cu5qubRqp09EcDPTdZS1CEoJAKBkCUDglAyBQOIEAwggRhhAjCCCGEECE7CsTqsKnMtG9oc4Wc1zbh3iVNehCtHE0aLa6q20nKmy8ZnjF2GzW0u/8A2j61zpbFtZ88myW2Lp88FJiWIVOJ1bqqsk1yuABIFgAOgDqXRt7enb093TWEcytWlWnrm+IxG50bg5ji1w6QtEJyg9UXhlEkmsMkx1Lnj8dJd1+JWiVzUqRxOWSp01H2UT4nUxpnElrnWPSpjpceJRJSUi0yPj4yvj0dcGl1O4c3UNaNyw9IHWOKzVaalHxNNKq4yL3NfJm/F5XY7kaemraCsJl9j84AWOO5DSduPQbEbhZY1GuEjocHyMt7mOdT+YJftEP86ffRDB73MM7dGAS/aIf50b6PYYQ8mGdz+YJPtMP86N+gPe5fnf5Ak+0w/wA6N/EnInuX52+QJPtMP86N/EMk7CeSLNtdUiOspI8Oh+FNNK19h2NYTc+GyV110IyXeesWwrAstU+SctTCeOJwdXVANw53Ei44km17cBsimnJ6mU1Z9EReTego6jDq2oqKaKWUVHNgvaHWaGNO1+1xXndv3FaFaEISaWP1Ovsi3pzptyWeJqn0GH6wDR0zRfc8y3bzLj0q9xLnNnaVtT05UEOSYJgf65Q/Y3epdSGv8b+5XGH/AK/9iJV4PgscL3RVdFK8C4Y2kILuy5C0x1rjvMmilSUpJSoY8illpaMf3WD6sK+Eqnc6UbKh7i8jEZmhigxMtgaGNcwOLW8Lrr27bhxPGbdoU6N3imsZSKlXHIQJQMkCUDIEoGQBQMhEDiIAIIEaDCCMBBAjQQQKwkCsVAoQKCBUECoAkwSAMDS4DwK2LWCqSeRx0rC0jUFLaF0sTDMVxHCZDLhdfVUbz74wSlgf84DZ3jWdxT5l8ZSXItvw4zXb+sNf9MepRu4k72Z4Z3zWeGYa/wCmPUjdx7BvZi/hvm3/AKgr/pj1Kd3HsG9l3E/DjNl7HMFf9MepRu4kbyXcN+c83MZqOP19vnj1JtzEFWkQq/NGYMQh5muxvEJonCzo/ZBDXDqIFrjwqFBLoS6kiosALC1uxMVkqhxOvw4v9g1csAf74M4Hwg7eNUVrWjX+1ingvo3FWj9nLBLOZMb+UpfI31Kn6OtF9xGn6SuvfYDsw4ufzhL9FvqTqytlygifpO799jZx3FjxrpPI31Jla0Vyih1tW9/EYBxvEjxrJPI31J1Qp9hlta+/FZCnmlnkMk8jpJHcXOKtSSWEZKlWpWlrqNt+I0gQEoJQJQOCUDIBAwiBjyAFQQGEChBAjCQKwggUVBDFCBWEEECoA8ggVBB5ACoICj9+FJB4C1z2IARvvwhAyRO4mAjoTtiJEY8VWWCIJPIARACIGEQSIgYQoAEoGAKBgSgZAlA6BQMeQB//2Q==" alt="Shadow Designer">
-              <span class="category-tag tech-tag">Technical</span>
-            </div>
-            <div class="card-body">
-              <h4>Shadow Designer</h4>
-              <p class="description">Showcase your UI/UX skills by redesigning a given app interface with creativity.</p>
-              <div class="meta-info">
-                <div class="meta-item"><i class="far fa-clock"></i> Full Day Event</div>
-                <div class="meta-item"><i class="fas fa-mobile-alt"></i> Design Lab</div>
+            <div class="event-card">
+              <div class="card-header">
+                <img
+                  src="data:image/jpeg;base64,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"
+                  alt="Shadow Designer">
+                <span class="category-tag tech-tag">Technical</span>
               </div>
-               <div class="event-details hidden">
-                 <p class="detail-row"><strong>Tool:</strong> Figma / Adobe XD.</p>
+              <div class="card-body">
+                <h4>Shadow Designer</h4>
+                <p class="description">Showcase your UI/UX skills by redesigning a given app interface with creativity.
+                </p>
+                <div class="meta-info">
+                  <div class="meta-item"><i class="far fa-clock"></i> Full Day Event</div>
+                  <div class="meta-item"><i class="fas fa-mobile-alt"></i> Design Lab</div>
+                </div>
+                <div class="event-details hidden">
+                  <p class="detail-row"><strong>Tool:</strong> Figma / Adobe XD.</p>
+                </div>
               </div>
-            </div>
-            <div class="card-footer">
-              <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
-              <button class="btn btn-primary tech-btn" onclick="openRegisterModal('https://docs.google.com/forms/d/e/1FAIpQLSfkz5_p2K9tKKXEeiCOYlPEL2V7XTfDugRVWzVSVUxR-RQDcA/viewform?embedded=true')">Register Now</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="tamil" class="tab-pane">
-        <div class="category-info">
-          <h3>Tamil Activities</h3>
-          <p class="subtitle">தமிழ் மொழியும் கலாச்சாரமும்</p>
-          <div class="coordinator-badge">
-             <img src="assets/img4.jpg" alt="Coordinator" class="coordinator-img">
-             <div class="coord-text">
-               <span class="coord-label">Coordinator</span>
-               <span class="coord-name">Mr. Sridhar</span>
-             </div>
-          </div>
-        </div>
-        
-        <div class="events-grid">
-          <div class="event-card">
-            <div class="card-header">
-              <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&q=80" alt="Bharathi Pattarai">
-              <span class="category-tag tamil-tag">Tamil</span>
-            </div>
-            <div class="card-body">
-              <h4>Bharathi Pattarai</h4>
-              <p class="description">A poetry competition celebrating the fiery words and wisdom of Mahakavi Bharathiyar.</p>
-              <div class="meta-info">
-                <div class="meta-item"><i class="far fa-clock"></i> 11:30 - 12:30 PM</div>
-                <div class="meta-item"><i class="fas fa-feather"></i> Stage 1</div>
+              <div class="card-footer">
+                <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
+                <button class="btn btn-primary tech-btn"
+                  onclick="openRegisterModal('https://docs.google.com/forms/d/e/1FAIpQLSfkz5_p2K9tKKXEeiCOYlPEL2V7XTfDugRVWzVSVUxR-RQDcA/viewform?embedded=true')">Register
+                  Now</button>
               </div>
-               <div class="event-details hidden">
-                 <p class="detail-row"><strong>Topic:</strong> Freedom & Youth.</p>
-              </div>
-            </div>
-            <div class="card-footer">
-              <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
-              <button class="btn btn-primary tamil-btn" onclick="openRegisterModal('')">Register Now</button>
-            </div>
-          </div>
-
-          <div class="event-card">
-            <div class="card-header">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Valluvar Vaakku">
-              <span class="category-tag tamil-tag">Tamil</span>
-            </div>
-            <div class="card-body">
-              <h4>Valluvar Vaakku</h4>
-              <p class="description">Recite Thirukkural with perfect pronunciation and explain its meaning in depth.</p>
-              <div class="meta-info">
-                <div class="meta-item"><i class="far fa-clock"></i> 1:00 - 2:00 PM</div>
-                <div class="meta-item"><i class="fas fa-book-open"></i> Stage 2</div>
-              </div>
-               <div class="event-details hidden">
-                 <p class="detail-row"><strong>Count:</strong> 5 Kurals.</p>
-              </div>
-            </div>
-            <div class="card-footer">
-              <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
-              <button class="btn btn-primary tamil-btn" onclick="openRegisterModal('https://docs.google.com/forms/d/e/1FAIpQLScNfGz1dGTbI7kNxlqjUZDiegKLhb8HSYZIEsi4UOZi77aFYg/viewform?embedded=true')">Register Now</button>
-            </div>
-          </div>
-
-          <div class="event-card">
-            <div class="card-header">
-              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Stylish Thamizha">
-              <span class="category-tag tamil-tag">Tamil</span>
-            </div>
-            <div class="card-body">
-              <h4>Stylish Thamizha</h4>
-              <p class="description">Showcase traditional Tamil attire and hair styling with a modern, stylish twist.</p>
-              <div class="meta-info">
-                <div class="meta-item"><i class="far fa-clock"></i> 1:00 - 3:00 PM</div>
-                <div class="meta-item"><i class="fas fa-crown"></i> Main Stage</div>
-              </div>
-               <div class="event-details hidden">
-                 <p class="detail-row"><strong>Type:</strong> Ramp Walk.</p>
-              </div>
-            </div>
-            <div class="card-footer">
-              <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
-              <button class="btn btn-primary tamil-btn" onclick="openRegisterModal('https://docs.google.com/forms/d/e/1FAIpQLSevU0igLAwueZL3IExcMpQWtPGP1657uyEiSlIabLoTYHNP5A/viewform?embedded=true')">Register Now</button>
             </div>
           </div>
         </div>
-      </div>
 
-    </div>
-  </div>
-</section>
+        <div id="tamil" class="tab-pane">
+          <div class="category-info">
+            <h3>Other Activities</h3>
+            <p class="subtitle">தமிழ் மொழியும் கலாச்சாரமும்</p>
+            <div class="coordinator-badge">
+              <img src="assets/img4.jpg" alt="Coordinator" class="coordinator-img">
+              <div class="coord-text">
+                <span class="coord-label">Coordinator</span>
+                <span class="coord-name">Mr. Sridhar</span>
+              </div>
+            </div>
+          </div>
 
-<div id="registrationModal" class="modal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <a id="newTabLink" href="#" target="_blank" class="open-external">
-        Open in New Tab <i class="fas fa-external-link-alt"></i>
-      </a>
-      <span class="close-modal" onclick="closeRegisterModal()">&times;</span>
-    </div>
-    <iframe id="registrationFrame" src="" title="Registration Form"></iframe>
-  </div>
-</div>
+          <div class="events-grid">
+            <div class="event-card">
+              <div class="card-header">
+                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&q=80"
+                  alt="Bharathi Pattarai">
+                <span class="category-tag tamil-tag">Tamil</span>
+              </div>
+              <div class="card-body">
+                <h4>Bharathi Pattarai</h4>
+                <p class="description">A poetry competition celebrating the fiery words and wisdom of Mahakavi
+                  Bharathiyar.</p>
+                <div class="meta-info">
+                  <div class="meta-item"><i class="far fa-clock"></i> 11:30 - 12:30 PM</div>
+                  <div class="meta-item"><i class="fas fa-feather"></i> Stage 1</div>
+                </div>
+                <div class="event-details hidden">
+                  <p class="detail-row"><strong>Topic:</strong> Freedom & Youth.</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
+                <button class="btn btn-primary tamil-btn" onclick="openRegisterModal('')">Register Now</button>
+              </div>
+            </div>
+            <div class="event-card">
+              <div class="card-header">
+                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&q=80"
+                  alt="Bharathi Pattarai">
+                <span class="category-tag tamil-tag">Tamil</span>
+              </div>
+              <div class="card-body">
+                <h4>Video Editing</h4>
+                <p class="description">A poetry competition celebrating the fiery words and wisdom of Mahakavi
+                  Bharathiyar.</p>
+                <div class="meta-info">
+                  <div class="meta-item"><i class="far fa-clock"></i> 11:30 - 12:30 PM</div>
+                  <div class="meta-item"><i class="fas fa-feather"></i> Stage 1</div>
+                </div>
+                <div class="event-details hidden">
+                  <p class="detail-row"><strong>Topic:</strong> Freedom & Youth.</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline" onclick="toggleEventDetails(this)">View Details</button>
+                <button class="btn btn-primary tamil-btn" onclick="openRegisterModal('')">Register Now</button>
+              </div>
+            </div>
 
-<footer class="main-footer">
-  <div class="footer-container">
-    <div class="footer-row">
-      <div class="footer-col">
-        <h3>About FACE Prep Campus</h3>
-        <p>Empowering students with industry-relevant skills and providing a platform to showcase their talents. Join us in celebrating innovation and creativity.</p>
-        <div class="social-links">
-           <a href="https://www.instagram.com/fpc_at_bharathidasan/"><i class="fab fa-instagram"></i></a>
-           <a href="https://www.linkedin.com/company/face-prep-campus"><i class="fab fa-linkedin-in"></i></a>
-           <a href="https://www.youtube.com/@faceprepcampus"><i class="fab fa-youtube"></i></a>
-           <a href="https://www.facebook.com/faceprepcampus/"><i class="fab fa-facebook-f"></i></a>
-        </div>
-      </div>
+
+
       
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#events-section">Events</a></li>
-          <li><a href="https://www.bcas.ac.in/" target="_blank">BCAS Official</a></li>
-          <li><a href="https://faceprepcampus.com/" target="_blank">FACE Prep Website</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3>Contact Us</h3>
-        <div class="contact-info">
-          <p><i class="fas fa-map-marker-alt"></i> Bharathidasan College of Arts and Science, Erode.</p>
-          <p><i class="fas fa-envelope"></i>connect@faceprep.in</p>
-          <p><i class="fas fa-phone"></i> - </p>
+          </div>
         </div>
+
       </div>
     </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2026 FACE Prep Campus. All Rights Reserved. | Designed for BCAS</p>
+  </section>
+
+  <div id="registrationModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a id="newTabLink" href="#" target="_blank" class="open-external">
+          Open in New Tab <i class="fas fa-external-link-alt"></i>
+        </a>
+        <span class="close-modal" onclick="closeRegisterModal()">&times;</span>
+      </div>
+      <iframe id="registrationFrame" src="" title="Registration Form"></iframe>
     </div>
   </div>
-</footer>
 
-</footer>
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-row">
+        <div class="footer-col">
+          <h3>About FACE Prep Campus</h3>
+          <p>Empowering students with industry-relevant skills and providing a platform to showcase their talents. Join
+            us in celebrating innovation and creativity.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/fpc_at_bharathidasan/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/face-prep-campus"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com/@faceprepcampus"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/faceprepcampus/"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
 
-<script src="script.js"></script>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#events-section">Events</a></li>
+            <li><a href="https://www.bcas.ac.in/" target="_blank">BCAS Official</a></li>
+            <li><a href="https://faceprepcampus.com/" target="_blank">FACE Prep Website</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Bharathidasan College of Arts and Science, Erode.</p>
+            <p><i class="fas fa-envelope"></i>connect@faceprep.in</p>
+            <p><i class="fas fa-phone"></i> - </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 FACE Prep Campus. All Rights Reserved. | Designed for BCAS</p>
+      </div>
+    </div>
+  </footer>
+
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
