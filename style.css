@@ -502,11 +502,11 @@ h1, h2, h3, h4 {
   border: none;
 }
 
-/* PROFESSIONAL FOOTER STYLES - IMPROVED */
+/* PROFESSIONAL FOOTER STYLES */
 .main-footer {
   background-color: var(--footer-bg);
   color: var(--footer-text);
-  padding: 80px 0 0; /* Increased top padding */
+  padding: 80px 0 0; 
   margin-top: auto;
   font-size: 0.9rem;
 }
@@ -520,22 +520,22 @@ h1, h2, h3, h4 {
 .footer-row {
   display: grid;
   grid-template-columns: 2fr 1fr 1.5fr;
-  gap: 60px; /* Increased gap between columns */
-  margin-bottom: 60px; /* Increased bottom margin */
+  gap: 60px; /* Improved Spacing */
+  margin-bottom: 60px;
 }
 
-/* 2. About Section Text - Readability */
+/* About Section Text - Readability */
 .footer-col p {
   line-height: 1.8;
   margin-bottom: 20px;
-  font-size: 0.95em; /* Slightly reduced font size */
-  max-width: 90%; /* Limits line length for better scanning */
+  font-size: 0.95em; 
+  max-width: 90%; 
 }
 
 .footer-col h3 {
   color: white;
   font-size: 1.25rem;
-  margin-bottom: 25px; /* Increased spacing below title */
+  margin-bottom: 25px; 
   position: relative;
   letter-spacing: 0.5px;
 }
@@ -550,13 +550,13 @@ h1, h2, h3, h4 {
   background-color: #f15136; 
 }
 
-/* 4. Quick Links - Improvements */
+/* Quick Links - Improvements */
 .footer-col ul {
   list-style: none;
 }
 
 .footer-col ul li {
-  margin-bottom: 14px; /* Increased line spacing */
+  margin-bottom: 14px; 
 }
 
 .footer-col ul li a {
@@ -569,10 +569,10 @@ h1, h2, h3, h4 {
 
 .footer-col ul li a:hover {
   color: #f15136; 
-  transform: translateX(5px); /* Slide effect */
+  transform: translateX(5px); 
 }
 
-/* 3. Social Icons - Larger & Hover */
+/* Social Icons - Larger & Hover */
 .social-links {
   display: flex;
   gap: 15px;
@@ -583,14 +583,14 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px; /* Increased size (was 36px) */
-  height: 44px; /* Increased size */
+  width: 44px; /* Increased size */
+  height: 44px; 
   background-color: rgba(255,255,255,0.08);
   color: white;
   border-radius: 50%;
   text-decoration: none;
   transition: all 0.3s ease;
-  font-size: 1.1rem; /* Larger icon */
+  font-size: 1.1rem; 
 }
 
 .social-links a:hover {
@@ -599,7 +599,7 @@ h1, h2, h3, h4 {
   box-shadow: 0 5px 15px rgba(241, 81, 54, 0.3);
 }
 
-/* 5. Contact Us - Link Styles */
+/* Contact Us - Link Styles */
 .contact-info p {
   display: flex;
   align-items: flex-start;
@@ -611,7 +611,7 @@ h1, h2, h3, h4 {
   color: var(--footer-text);
   text-decoration: none;
   transition: color 0.3s ease;
-  display: flex; /* Ensures icon and text align */
+  display: flex; 
   gap: 12px;
 }
 
@@ -624,9 +624,9 @@ h1, h2, h3, h4 {
   margin-top: 4px;
 }
 
-/* 6. Programme Coordinator - Hierarchy */
+/* Programme Coordinator - Hierarchy */
 .campus-manager {
-  margin-top: 35px; /* Increased separation */
+  margin-top: 35px;
   padding-top: 25px;
   border-top: 1px solid rgba(255,255,255,0.1);
 }
@@ -646,7 +646,7 @@ h1, h2, h3, h4 {
 }
 
 .manager-profile img {
-  width: 58px; /* Slightly enlarged (was 50px) */
+  width: 58px; /* Slightly enlarged */
   height: 58px;
   border-radius: 50%;
   object-fit: cover;
@@ -655,7 +655,7 @@ h1, h2, h3, h4 {
 
 .manager-info .name {
   color: white;
-  font-weight: 700; /* Increased weight */
+  font-weight: 700; 
   font-size: 0.95rem;
   margin: 0 0 4px 0;
   line-height: 1.2;
@@ -665,17 +665,17 @@ h1, h2, h3, h4 {
   color: var(--footer-text);
   font-size: 0.8rem;
   margin: 0;
-  opacity: 0.7; /* Lowered opacity for hierarchy */
+  opacity: 0.7; 
 }
 
-/* 7. Footer Bottom Line */
+/* Footer Bottom Line */
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.08);
-  padding: 30px 0; /* More spacing */
+  padding: 30px 0; 
   margin-top: 20px;
   text-align: center;
-  font-size: 0.8rem; /* Reduced font size */
-  color: rgba(255,255,255,0.6); /* Lowered opacity */
+  font-size: 0.8rem; 
+  color: rgba(255,255,255,0.6); 
 }
 
 /* --- MOBILE OPTIMIZATION MEDIA QUERIES --- */
@@ -697,27 +697,57 @@ h1, h2, h3, h4 {
   .event-meta { justify-content: center; }
   
   .image-frame {
-    max-width: 220px; /* Smaller image */
+    max-width: 220px; 
   }
 
-  /* Footer Mobile Optimization */
+  /* Footer Mobile Optimization - ENHANCED */
+  .main-footer {
+    text-align: center;
+  }
+
   .footer-row {
     grid-template-columns: 1fr;
-    gap: 50px; /* Increased vertical spacing on mobile */
+    gap: 50px; 
   }
 
   .footer-col {
-    margin-bottom: 10px; /* Add margin to blocks */
+    margin-bottom: 10px; 
+  }
+
+  /* Center Social Links on Mobile */
+  .social-links {
+    justify-content: center;
+  }
+  
+  /* Center Contact Info Items on Mobile */
+  .contact-info p {
+    justify-content: center;
+  }
+  
+  /* Center Manager Profile on Mobile */
+  .manager-profile {
+    justify-content: center;
+    text-align: left; /* Keep name/role text left-aligned relative to image */
+  }
+
+  /* Center underline for titles on mobile */
+  .footer-col h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Center About text paragraph */
+  .footer-col p {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @media (max-width: 768px) {
-  /* Fix Hero Logo Overlap */
   .hero {
-    padding-top: 100px; /* Push content down so logos fit */
+    padding-top: 100px; 
   }
 
-  /* VIDEO SWITCHING FOR MOBILE */
   .desktop-bg {
     display: none;
   }
@@ -726,7 +756,7 @@ h1, h2, h3, h4 {
   }
 
   .corner-logo {
-    height: 50px; /* Smaller logos */
+    height: 50px; 
     top: 20px;
   }
   .logo-left { left: 15px; }
@@ -747,28 +777,27 @@ h1, h2, h3, h4 {
   
   .time-value { font-size: 1.3rem; }
 
-  /* Swipeable Tabs for Mobile (App-like feel) */
+  /* Swipeable Tabs for Mobile */
   .tab-navigation {
     justify-content: flex-start;
     overflow-x: auto;
     padding-bottom: 15px;
-    padding-left: 20px; /* Start padding */
-    padding-right: 20px; /* End padding */
-    margin: 0 -20px; /* Negative margin to extend scroll area */
+    padding-left: 20px; 
+    padding-right: 20px; 
+    margin: 0 -20px; 
     -webkit-overflow-scrolling: touch;
     flex-wrap: nowrap;
-    scrollbar-width: none; /* Hide scrollbar Firefox */
+    scrollbar-width: none; 
   }
   
   .tab-navigation::-webkit-scrollbar {
-    display: none; /* Hide scrollbar Chrome/Safari */
+    display: none; 
   }
 
   .tab-btn {
-    flex: 0 0 auto; /* Don't shrink buttons */
+    flex: 0 0 auto; 
   }
 
-  /* Full width Modal */
   .modal-content {
     width: 100%;
     height: 100%;
@@ -776,13 +805,11 @@ h1, h2, h3, h4 {
     border-radius: 0;
   }
 
-  /* Force single column for events on mobile/tablet */
   .events-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  /* Stack buttons for easier tapping */
   .card-footer {
     flex-direction: column;
   }
