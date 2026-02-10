@@ -612,6 +612,47 @@ h1, h2, h3, h4 {
   color: rgba(255,255,255,0.5);
 }
 
+/* CAMPUS MANAGER FOOTER STYLES */
+.campus-manager {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.campus-manager h4 {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.manager-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.manager-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+.manager-info .name {
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.manager-info .role {
+  color: var(--footer-text);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
 /* --- MOBILE OPTIMIZATION MEDIA QUERIES --- */
 
 @media (max-width: 900px) {
