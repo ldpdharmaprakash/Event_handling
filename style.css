@@ -3,9 +3,9 @@
   --primary-color: #667eea;
   --secondary-color: #764ba2;
   --comm-color: #ff6b6b;
-  --business-color: #FF3CAC; /* Renamed from creative-color */
+  --business-color: #FF3CAC;
   --tech-color: #43e97b;
-  --other-color: #fa709a;    /* Renamed from tamil-color */
+  --other-color: #fa709a;
   --text-dark: #2d3436;
   --text-light: #636e72;
   --bg-light: #e3e6e8;
@@ -310,10 +310,8 @@ h1, h2, h3, h4 {
 
 /* Individual Active Colors */
 .tab-btn[data-tab="communication"].active { background: var(--comm-color); border-color: var(--comm-color); }
-/* RENAMED */
 .tab-btn[data-tab="business"].active { background: var(--business-color); border-color: var(--business-color); }
 .tab-btn[data-tab="technical"].active { background: var(--tech-color); border-color: var(--tech-color); color: #000; }
-/* RENAMED */
 .tab-btn[data-tab="other"].active { background: var(--other-color); border-color: var(--other-color); }
 
 
@@ -406,7 +404,6 @@ h1, h2, h3, h4 {
 }
 
 .comm-tag { color: var(--comm-color); }
-/* RENAMED TAGS */
 .business-tag { color: var(--business-color); }
 .tech-tag { color: #2d8a55; }
 .other-tag { color: var(--other-color); }
@@ -505,11 +502,11 @@ h1, h2, h3, h4 {
   border: none;
 }
 
-/* PROFESSIONAL FOOTER STYLES */
+/* PROFESSIONAL FOOTER STYLES - IMPROVED */
 .main-footer {
   background-color: var(--footer-bg);
   color: var(--footer-text);
-  padding: 60px 0 0;
+  padding: 80px 0 0; /* Increased top padding */
   margin-top: auto;
   font-size: 0.9rem;
 }
@@ -523,80 +520,103 @@ h1, h2, h3, h4 {
 .footer-row {
   display: grid;
   grid-template-columns: 2fr 1fr 1.5fr;
-  gap: 40px;
-  margin-bottom: 40px;
+  gap: 60px; /* Increased gap between columns */
+  margin-bottom: 60px; /* Increased bottom margin */
+}
+
+/* 2. About Section Text - Readability */
+.footer-col p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 0.95em; /* Slightly reduced font size */
+  max-width: 90%; /* Limits line length for better scanning */
 }
 
 .footer-col h3 {
   color: white;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  font-size: 1.25rem;
+  margin-bottom: 25px; /* Increased spacing below title */
   position: relative;
+  letter-spacing: 0.5px;
 }
 
 .footer-col h3::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -8px;
+  bottom: -10px;
   width: 40px;
   height: 2px;
   background-color: #f15136; 
 }
 
-.footer-col p {
-  line-height: 1.8;
-  margin-bottom: 15px;
-}
-
+/* 4. Quick Links - Improvements */
 .footer-col ul {
   list-style: none;
 }
 
 .footer-col ul li {
-  margin-bottom: 10px;
+  margin-bottom: 14px; /* Increased line spacing */
 }
 
 .footer-col ul li a {
   color: var(--footer-text);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
 }
 
 .footer-col ul li a:hover {
   color: #f15136; 
-  padding-left: 5px;
+  transform: translateX(5px); /* Slide effect */
 }
 
+/* 3. Social Icons - Larger & Hover */
 .social-links {
   display: flex;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  background-color: rgba(255,255,255,0.1);
+  width: 44px; /* Increased size (was 36px) */
+  height: 44px; /* Increased size */
+  background-color: rgba(255,255,255,0.08);
   color: white;
   border-radius: 50%;
   text-decoration: none;
   transition: all 0.3s ease;
+  font-size: 1.1rem; /* Larger icon */
 }
 
 .social-links a:hover {
   background-color: #f15136; 
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(241, 81, 54, 0.3);
 }
 
+/* 5. Contact Us - Link Styles */
 .contact-info p {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
+}
+
+.contact-info a {
+  color: var(--footer-text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex; /* Ensures icon and text align */
+  gap: 12px;
+}
+
+.contact-info a:hover {
+  color: #f15136;
 }
 
 .contact-info i {
@@ -604,46 +624,40 @@ h1, h2, h3, h4 {
   margin-top: 4px;
 }
 
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding: 20px 0;
-  text-align: center;
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.5);
-}
-
-/* CAMPUS MANAGER FOOTER STYLES */
+/* 6. Programme Coordinator - Hierarchy */
 .campus-manager {
-  margin-top: 25px;
-  padding-top: 20px;
+  margin-top: 35px; /* Increased separation */
+  padding-top: 25px;
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 .campus-manager h4 {
   color: white;
   font-size: 1rem;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .manager-profile {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
 }
 
 .manager-profile img {
-  width: 50px;
-  height: 50px;
+  width: 58px; /* Slightly enlarged (was 50px) */
+  height: 58px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.15);
 }
 
 .manager-info .name {
   color: white;
-  font-weight: 600;
+  font-weight: 700; /* Increased weight */
   font-size: 0.95rem;
-  margin: 0;
+  margin: 0 0 4px 0;
   line-height: 1.2;
 }
 
@@ -651,6 +665,17 @@ h1, h2, h3, h4 {
   color: var(--footer-text);
   font-size: 0.8rem;
   margin: 0;
+  opacity: 0.7; /* Lowered opacity for hierarchy */
+}
+
+/* 7. Footer Bottom Line */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 30px 0; /* More spacing */
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.8rem; /* Reduced font size */
+  color: rgba(255,255,255,0.6); /* Lowered opacity */
 }
 
 /* --- MOBILE OPTIMIZATION MEDIA QUERIES --- */
@@ -675,9 +700,14 @@ h1, h2, h3, h4 {
     max-width: 220px; /* Smaller image */
   }
 
+  /* Footer Mobile Optimization */
   .footer-row {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 50px; /* Increased vertical spacing on mobile */
+  }
+
+  .footer-col {
+    margin-bottom: 10px; /* Add margin to blocks */
   }
 }
 
