@@ -216,6 +216,55 @@ h1, h2, h3, h4 {
   margin-top: 5px;
 }
 
+/* HERO COORDINATOR STYLES */
+.hero-coordinator {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.hero-coordinator h4 {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-coordinator .manager-profile {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 10px 18px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hero-coordinator .manager-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-coordinator .manager-info .name {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.hero-coordinator .manager-info .role {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  margin: 0;
+  opacity: 1;
+}
+
 /* CTA BUTTON */
 .cta {
   display: inline-flex;
@@ -264,7 +313,6 @@ h1, h2, h3, h4 {
   flex-wrap: wrap;
 }
 
-/* BUTTON DESIGN */
 .tab-btn {
   display: flex;
   align-items: center;
@@ -308,12 +356,10 @@ h1, h2, h3, h4 {
   color: white;
 }
 
-/* Individual Active Colors */
 .tab-btn[data-tab="communication"].active { background: var(--comm-color); border-color: var(--comm-color); }
 .tab-btn[data-tab="business"].active { background: var(--business-color); border-color: var(--business-color); }
 .tab-btn[data-tab="technical"].active { background: var(--tech-color); border-color: var(--tech-color); color: #000; }
 .tab-btn[data-tab="other"].active { background: var(--other-color); border-color: var(--other-color); }
-
 
 /* EVENTS CONTAINER */
 .events-container {
@@ -363,7 +409,6 @@ h1, h2, h3, h4 {
 
 .events-grid {
   display: grid;
-  /* Optimized grid for mobile */
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
   gap: 25px;
 }
@@ -473,7 +518,7 @@ h1, h2, h3, h4 {
 .modal-content {
   background-color: white;
   margin: 5vh auto;
-  width: 95%; /* Wider on mobile */
+  width: 95%; 
   max-width: 800px;
   height: 90vh;
   border-radius: 12px;
@@ -502,7 +547,7 @@ h1, h2, h3, h4 {
   border: none;
 }
 
-/* PROFESSIONAL FOOTER STYLES */
+/* FOOTER STYLES */
 .main-footer {
   background-color: var(--footer-bg);
   color: var(--footer-text);
@@ -520,11 +565,10 @@ h1, h2, h3, h4 {
 .footer-row {
   display: grid;
   grid-template-columns: 2fr 1fr 1.5fr;
-  gap: 60px; /* Improved Spacing */
+  gap: 60px; 
   margin-bottom: 60px;
 }
 
-/* About Section Text - Readability */
 .footer-col p {
   line-height: 1.8;
   margin-bottom: 20px;
@@ -550,7 +594,6 @@ h1, h2, h3, h4 {
   background-color: #f15136; 
 }
 
-/* Quick Links - Improvements */
 .footer-col ul {
   list-style: none;
 }
@@ -572,7 +615,6 @@ h1, h2, h3, h4 {
   transform: translateX(5px); 
 }
 
-/* Social Icons - Larger & Hover */
 .social-links {
   display: flex;
   gap: 15px;
@@ -583,7 +625,7 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px; /* Increased size */
+  width: 44px; 
   height: 44px; 
   background-color: rgba(255,255,255,0.08);
   color: white;
@@ -599,7 +641,6 @@ h1, h2, h3, h4 {
   box-shadow: 0 5px 15px rgba(241, 81, 54, 0.3);
 }
 
-/* Contact Us - Link Styles */
 .contact-info p {
   display: flex;
   align-items: flex-start;
@@ -624,51 +665,6 @@ h1, h2, h3, h4 {
   margin-top: 4px;
 }
 
-/* Programme Coordinator - Hierarchy */
-.campus-manager {
-  margin-top: 35px;
-  padding-top: 25px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-.campus-manager h4 {
-  color: white;
-  font-size: 1rem;
-  margin-bottom: 18px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
-.manager-profile {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.manager-profile img {
-  width: 58px; /* Slightly enlarged */
-  height: 58px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(255,255,255,0.15);
-}
-
-.manager-info .name {
-  color: white;
-  font-weight: 700; 
-  font-size: 0.95rem;
-  margin: 0 0 4px 0;
-  line-height: 1.2;
-}
-
-.manager-info .role {
-  color: var(--footer-text);
-  font-size: 0.8rem;
-  margin: 0;
-  opacity: 0.7; 
-}
-
-/* Footer Bottom Line */
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.08);
   padding: 30px 0; 
@@ -678,8 +674,7 @@ h1, h2, h3, h4 {
   color: rgba(255,255,255,0.6); 
 }
 
-/* --- MOBILE OPTIMIZATION MEDIA QUERIES --- */
-
+/* MOBILE OPTIMIZATION */
 @media (max-width: 900px) {
   .hero-layout { 
     flex-direction: column; 
@@ -694,13 +689,14 @@ h1, h2, h3, h4 {
   }
   
   .hero-text-col { text-align: center; }
+  .hero-coordinator { text-align: center; }
+  .hero-coordinator .manager-profile { justify-content: center; }
   .event-meta { justify-content: center; }
   
   .image-frame {
     max-width: 220px; 
   }
 
-  /* Footer Mobile Optimization - ENHANCED */
   .main-footer {
     text-align: center;
   }
@@ -710,33 +706,19 @@ h1, h2, h3, h4 {
     gap: 50px; 
   }
 
-  .footer-col {
-    margin-bottom: 10px; 
-  }
-
-  /* Center Social Links on Mobile */
   .social-links {
     justify-content: center;
   }
   
-  /* Center Contact Info Items on Mobile */
   .contact-info p {
     justify-content: center;
   }
-  
-  /* Center Manager Profile on Mobile */
-  .manager-profile {
-    justify-content: center;
-    text-align: left; /* Keep name/role text left-aligned relative to image */
-  }
 
-  /* Center underline for titles on mobile */
   .footer-col h3::after {
     left: 50%;
     transform: translateX(-50%);
   }
   
-  /* Center About text paragraph */
   .footer-col p {
     margin-left: auto;
     margin-right: auto;
@@ -777,7 +759,6 @@ h1, h2, h3, h4 {
   
   .time-value { font-size: 1.3rem; }
 
-  /* Swipeable Tabs for Mobile */
   .tab-navigation {
     justify-content: flex-start;
     overflow-x: auto;
