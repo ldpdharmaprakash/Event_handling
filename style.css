@@ -125,11 +125,11 @@ h1, h2, h3, h4 {
   justify-content: space-between;
   align-items: flex-start;
   z-index: 10;
-  pointer-events: none; /* Let clicks pass through empty space */
+  pointer-events: none; 
 }
 
 .hero-top-bar a {
-  pointer-events: auto; /* Restore clicks on logos */
+  pointer-events: auto; 
 }
 
 .top-logo {
@@ -355,7 +355,6 @@ h1, h2, h3, h4 {
   z-index: 1; 
 }
 
-/* Layering fix so text sits ON TOP of the shimmer shine */
 .shimmer-btn .btn-text, .shimmer-btn i {
   position: relative;
   z-index: 2;
@@ -497,12 +496,17 @@ h1, h2, h3, h4 {
   margin-top: 10px;
 }
 
+/* Updated to nicely center the text block since the journey is removed */
 .about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-text-block {
+  max-width: 800px;
 }
 
 .about-text-block p {
@@ -516,6 +520,7 @@ h1, h2, h3, h4 {
   display: flex;
   gap: 20px;
   margin-top: 30px;
+  justify-content: center;
 }
 
 .stat-item {
@@ -525,6 +530,7 @@ h1, h2, h3, h4 {
   text-align: center;
   border: 1px solid rgba(123, 44, 191, 0.1);
   flex: 1;
+  max-width: 250px;
   box-shadow: inset 0 2px 5px rgba(0,0,0,0.02);
 }
 
@@ -544,80 +550,6 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   color: var(--text-dark);
   letter-spacing: 1px;
-}
-
-.themes-block.alternate-themes .block-title {
-  font-size: 1.6rem;
-  margin-bottom: 40px;
-  text-align: center;
-  color: var(--text-dark);
-}
-
-.event-journey {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  padding: 10px 0;
-}
-
-.event-journey::before {
-  content: '';
-  position: absolute;
-  top: 35px; 
-  left: 10%;
-  right: 10%;
-  height: 3px;
-  background: linear-gradient(90deg, rgba(123, 44, 191, 0.2), rgba(199, 125, 255, 0.3));
-  border-radius: 3px;
-  z-index: 0;
-}
-
-.journey-node {
-  position: relative;
-  z-index: 1;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  cursor: default;
-}
-
-.node-icon {
-  width: 70px;
-  height: 70px;
-  background: #ffffff;
-  border: 4px solid var(--bg-light);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.6rem;
-  color: var(--text-light);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-  transition: scale 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), translate 0.4s, background 0.4s;
-}
-
-.journey-node:hover .node-icon {
-  scale: 1.15;
-  translate: 0 -5px;
-  border-color: #fff;
-  color: #fff;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  box-shadow: 0 15px 30px rgba(123, 44, 191, 0.3);
-}
-
-.node-label {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  color: var(--text-dark);
-  font-size: 1.05rem;
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease;
-}
-
-.journey-node:hover .node-label {
-  color: var(--primary-color);
 }
 
 .vision-mission-row {
@@ -1107,7 +1039,6 @@ h1, h2, h3, h4 {
 /* MOBILE OPTIMIZATION */
 @media (max-width: 900px) {
   .about-content {
-    grid-template-columns: 1fr;
     gap: 40px;
   }
   
@@ -1170,22 +1101,6 @@ h1, h2, h3, h4 {
 
   .scroll-indicator {
     display: none; 
-  }
-
-  .event-journey {
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  .event-journey::before {
-    top: 5%;
-    bottom: 5%;
-    left: 50%;
-    right: auto;
-    width: 3px;
-    height: 90%;
-    transform: translateX(-50%);
-    background: linear-gradient(180deg, rgba(123, 44, 191, 0.2), rgba(199, 125, 255, 0.3));
   }
 
   .vision-mission-row {
