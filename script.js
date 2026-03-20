@@ -132,7 +132,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /* --- COUNTDOWN TIMER --- */
-const targetDate = new Date("March 3, 2026 00:00:00").getTime();
+// Updated to March 23, 2026 as per request
+const targetDate = new Date("March 23, 2026 00:00:00").getTime();
 
 const timer = setInterval(function() {
   const now = new Date().getTime();
