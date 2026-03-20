@@ -7,7 +7,7 @@
   <title>INNOVEX 2K26 - FACE PREP CAMPUS</title>
   <link rel="stylesheet" href="style.css">
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="icon" href="assets/fpc_logo.png" type="image/png">
@@ -16,33 +16,39 @@
 <body>
 
   <section class="hero">
-    <video autoplay muted loop playsinline class="back-video desktop-bg">
-      <source src="assets/bg_pc.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline class="back-video">
+      <source src="assets/bg.mp4" type="video/mp4">
     </video>
 
-    <video autoplay muted loop playsinline class="back-video mobile-bg">
-      <source src="assets/bg_mob.mp4" type="video/mp4">
-    </video>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
 
-    <a href="https://www.bcas.ac.in/" target="_blank">
+    <a href="https://www.bcas.ac.in/" target="_blank" class="fade-in-down">
       <img src="assets/bcas.png" alt="College Logo" class="corner-logo logo-left">
+    </a>
+    <a href="https://faceprepcampus.com/" target="_blank" class="fade-in-down">
+      <img src="assets/fpc.png" alt="FACE Prep Campus" class="corner-logo logo-right">
     </a>
 
     <div class="hero-content">
       <div class="hero-layout">
         <div class="hero-text-col full-width">
           
-          <div class="brand-badge">FACE Prep Campus</div>
-          <h1 class="main-title">INNOVEX <span class="highlight">2K26</span></h1>
-          <p class="college-name">Bharathidasan College of Arts and Science (Autonomous), Erode</p>
+          <div class="brand-badge animate-up delay-1">FACE Prep Campus</div>
+          
+          <div class="title-wrapper animate-up delay-2">
+            <h1 class="main-title">INNOVEX <span class="highlight">2K26</span></h1>
+          </div>
+          
+          <p class="college-name animate-up delay-3">Bharathidasan College of Arts and Science (Autonomous), Erode</p>
 
-          <div class="event-meta center-meta">
+          <div class="event-meta center-meta animate-up delay-4">
             <span class="meta-item"><i class="far fa-calendar-alt"></i> 23rd March 2026</span>
             <span class="divider">|</span>
             <span class="meta-item"><i class="fas fa-university"></i> Intra Campus Event</span>
           </div>
 
-          <div id="countdown" class="countdown-container center-countdown">
+          <div id="countdown" class="countdown-container center-countdown animate-up delay-5">
             <div class="time-box">
               <span id="days" class="time-value">00</span>
               <span class="time-label">Days</span>
@@ -61,9 +67,9 @@
             </div>
           </div>
 
-          <div class="campus-manager hero-coordinator center-coordinator">
+          <div class="campus-manager hero-coordinator center-coordinator animate-up delay-6">
             <h4>Programme Coordinator</h4>
-            <div class="manager-profile">
+            <div class="manager-profile glass-panel">
               <img src="assets/Coordinator/campus_manager.png" alt="Mrs. Karthika Sundarrajan">
               <div class="manager-info">
                 <p class="name">Mrs. Karthika Sundarrajan</p>
@@ -72,9 +78,16 @@
             </div>
           </div>
 
-          <a href="#events-section" class="cta">Explore Events <i class="fas fa-arrow-down"></i></a>
+          <a href="#events-section" class="cta shimmer-btn animate-up delay-7">
+            <span>Explore Events</span> <i class="fas fa-arrow-down"></i>
+          </a>
         </div>
       </div>
+    </div>
+
+    <div class="scroll-indicator fade-in-up delay-8">
+      <div class="mouse"></div>
+      <p>Scroll to explore</p>
     </div>
   </section>
 
@@ -102,13 +115,25 @@
           </div>
         </div>
 
-        <div class="themes-block">
-          <h4 class="block-title">Core Themes</h4>
-          <div class="themes-grid">
-            <div class="theme-card"><i class="fas fa-lightbulb"></i><span>Innovate</span></div>
-            <div class="theme-card"><i class="fas fa-users"></i><span>Collaborate</span></div>
-            <div class="theme-card"><i class="fas fa-trophy"></i><span>Compete</span></div>
-            <div class="theme-card"><i class="fas fa-chart-line"></i><span>Excel</span></div>
+        <div class="themes-block alternate-themes">
+          <h4 class="block-title">The INNOVEX Journey</h4>
+          <div class="event-journey">
+            <div class="journey-node">
+              <div class="node-icon"><i class="fas fa-lightbulb"></i></div>
+              <span class="node-label">Innovate</span>
+            </div>
+            <div class="journey-node">
+              <div class="node-icon"><i class="fas fa-users"></i></div>
+              <span class="node-label">Collaborate</span>
+            </div>
+            <div class="journey-node">
+              <div class="node-icon"><i class="fas fa-trophy"></i></div>
+              <span class="node-label">Compete</span>
+            </div>
+            <div class="journey-node">
+              <div class="node-icon"><i class="fas fa-chart-line"></i></div>
+              <span class="node-label">Excel</span>
+            </div>
           </div>
         </div>
       </div>
