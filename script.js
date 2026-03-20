@@ -101,16 +101,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Smooth scroll for CTA
+  // Smooth scroll for CTA - FIXED visual gap bug
   const ctaButton = document.querySelector('.cta');
   if (ctaButton) {
     ctaButton.addEventListener('click', function(e) {
       e.preventDefault();
       const targetSection = document.querySelector('#events-section');
       if (targetSection) {
-        const stickyNav = document.querySelector('.sticky-nav');
-        const navHeight = stickyNav ? stickyNav.offsetHeight : 0;
-        const targetPosition = targetSection.offsetTop - navHeight;
+        // We scroll directly to offsetTop so the sticky nav anchors perfectly to the top
+        const targetPosition = targetSection.offsetTop;
         
         window.scrollTo({
           top: targetPosition,
@@ -132,8 +131,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /* --- COUNTDOWN TIMER --- */
-// Updated to March 23, 2026 as per request
-const targetDate = new Date("March 23, 2026 00:00:00").getTime();
+// FIXED: Using ISO format string to prevent 'Invalid Date' errors in iOS Safari
+const targetDate = new Date("2026-03-23T00:00:00").getTime();
 
 const timer = setInterval(function() {
   const now = new Date().getTime();

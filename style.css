@@ -1,6 +1,6 @@
 /* Reset and Base Styles - BALANCED PURPLE ACCENT THEME */
 :root {
-  /* Core Theme Colors - Purple Accents */
+  /* Core Theme Colors */
   --primary-color: #7b2cbf;     
   --secondary-color: #5a189a;   
   --accent-color: #9d4edd;      
@@ -74,7 +74,7 @@ h1, h2, h3, h4 {
   z-index: -3;
 }
 
-/* Advanced Radial Overlay for Cinematic Spotlight */
+/* Cinematic Spotlight Overlay */
 .hero::before {
   content: '';
   position: absolute;
@@ -86,7 +86,7 @@ h1, h2, h3, h4 {
   z-index: -2;
 }
 
-/* Glowing Orbs for atmosphere */
+/* Glowing Orbs */
 .glow-orb {
   position: absolute;
   border-radius: 50%;
@@ -114,24 +114,37 @@ h1, h2, h3, h4 {
   animation-direction: alternate-reverse;
 }
 
-.corner-logo {
+/* TOP BAR LOGOS (Flexbox Fix) */
+.hero-top-bar {
   position: absolute;
-  top: 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 10;
+  pointer-events: none; /* Let clicks pass through empty space */
+}
+
+.hero-top-bar a {
+  pointer-events: auto; /* Restore clicks on logos */
+}
+
+.top-logo {
   height: 70px;
   width: auto;
-  z-index: 10;
   border-radius: 8px;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: scale 0.3s ease, filter 0.3s ease;
   filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
 }
 
-.corner-logo:hover {
-  transform: scale(1.05);
+.top-logo:hover {
+  scale: 1.05;
 }
 
-.logo-left { left: 30px; }
-.logo-right { right: 30px; }
-
+/* Hero Text Layout */
 .hero-content {
   position: relative;
   z-index: 1;
@@ -236,11 +249,11 @@ h1, h2, h3, h4 {
   text-align: center;
   min-width: 80px;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: translate 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .time-box:hover {
-  transform: translateY(-5px);
+  translate: 0 -5px; 
   box-shadow: 0 12px 40px 0 rgba(157, 78, 221, 0.3);
 }
 
@@ -322,7 +335,7 @@ h1, h2, h3, h4 {
   font-weight: 500;
 }
 
-/* Shimmering CTA Button */
+/* Shimmer Button Logic */
 .shimmer-btn {
   display: inline-flex;
   align-items: center;
@@ -338,8 +351,14 @@ h1, h2, h3, h4 {
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(123, 44, 191, 0.5);
-  transition: all 0.3s ease;
-  z-index: 1;
+  transition: translate 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; 
+  z-index: 1; 
+}
+
+/* Layering fix so text sits ON TOP of the shimmer shine */
+.shimmer-btn .btn-text, .shimmer-btn i {
+  position: relative;
+  z-index: 2;
 }
 
 .shimmer-btn::before {
@@ -350,19 +369,22 @@ h1, h2, h3, h4 {
   background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
   transform: skewX(-20deg);
   animation: shine 3s infinite;
-  z-index: -1;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .shimmer-btn:hover {
-  transform: translateY(-3px);
+  translate: 0 -3px; 
   background: var(--accent-color);
   box-shadow: 0 15px 35px rgba(157, 78, 221, 0.7);
 }
 
-/* Animated Scroll Indicator */
+/* Scroll Indicator Positioning */
 .scroll-indicator {
   position: absolute;
   bottom: 30px;
+  left: 0; 
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -452,10 +474,9 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================
-   REST OF THE STYLES (Kept intact)
+   REST OF THE STYLES
    ========================================= */
 
-/* --- ABOUT SECTION STYLES --- */
 .about-section {
   padding: 80px 0;
   background: #ffffff;
@@ -525,7 +546,6 @@ h1, h2, h3, h4 {
   letter-spacing: 1px;
 }
 
-/* --- THE EVENT JOURNEY --- */
 .themes-block.alternate-themes .block-title {
   font-size: 1.6rem;
   margin-bottom: 40px;
@@ -575,11 +595,12 @@ h1, h2, h3, h4 {
   font-size: 1.6rem;
   color: var(--text-light);
   box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: scale 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), translate 0.4s, background 0.4s;
 }
 
 .journey-node:hover .node-icon {
-  transform: scale(1.15) translateY(-5px);
+  scale: 1.15;
+  translate: 0 -5px;
   border-color: #fff;
   color: #fff;
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
@@ -663,7 +684,6 @@ h1, h2, h3, h4 {
   font-size: 1.05rem;
 }
 
-/* STICKY NAVIGATION & TABS */
 .sticky-nav {
   position: sticky;
   top: 0;
@@ -742,7 +762,6 @@ h1, h2, h3, h4 {
   color: #000;
 }
 
-/* EVENTS CONTAINER */
 .events-container {
   padding-top: 40px;
   padding-bottom: 80px;
@@ -810,11 +829,11 @@ h1, h2, h3, h4 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: translate 0.3s ease, box-shadow 0.3s ease;
 }
 
 .event-card:hover {
-  transform: translateY(-5px);
+  translate: 0 -5px; 
   box-shadow: var(--card-hover-shadow);
 }
 
@@ -897,7 +916,6 @@ h1, h2, h3, h4 {
   background: var(--primary-color);
 }
 
-/* Utilities */
 .hidden { display: none; }
 .tab-pane { display: none; animation: fadeIn 0.4s ease; }
 .tab-pane.active { display: block; }
@@ -907,7 +925,6 @@ h1, h2, h3, h4 {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* MODAL STYLES */
 .modal {
   display: none;
   position: fixed;
@@ -960,7 +977,6 @@ h1, h2, h3, h4 {
   border: none;
 }
 
-/* FOOTER STYLES */
 .main-footer {
   background-color: var(--footer-bg);
   color: var(--footer-text);
@@ -1019,14 +1035,14 @@ h1, h2, h3, h4 {
 .footer-col ul li a {
   color: var(--footer-text);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: translate 0.3s ease, color 0.3s ease; 
   display: inline-block;
   position: relative;
 }
 
 .footer-col ul li a:hover {
   color: var(--accent-color); 
-  transform: translateX(5px); 
+  translate: 5px 0; 
 }
 
 .social-links {
@@ -1045,13 +1061,13 @@ h1, h2, h3, h4 {
   color: white;
   border-radius: 50%;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: translate 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; 
   font-size: 1.1rem; 
 }
 
 .social-links a:hover {
   background-color: var(--accent-color); 
-  transform: translateY(-4px);
+  translate: 0 -4px; 
   box-shadow: 0 5px 15px rgba(157, 78, 221, 0.4);
 }
 
@@ -1128,12 +1144,13 @@ h1, h2, h3, h4 {
     padding-top: 100px; 
   }
 
-  .corner-logo {
-    height: 50px; 
-    top: 20px;
+  .hero-top-bar {
+    padding: 20px 15px;
   }
-  .logo-left { left: 15px; }
-  .logo-right { right: 15px; }
+
+  .top-logo {
+    height: 50px; 
+  }
 
   .main-title {
     font-size: 3rem;
@@ -1152,7 +1169,7 @@ h1, h2, h3, h4 {
   .time-value { font-size: 1.5rem; }
 
   .scroll-indicator {
-    display: none; /* Hide on small screens to save space */
+    display: none; 
   }
 
   .event-journey {
